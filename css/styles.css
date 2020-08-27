@@ -19,33 +19,35 @@ body {
 
 .balloon{
     position: absolute;
-    height: 45vh;
-    width: 45vh;
+    height: 50vh;
+    width: 50vh;
     top: -2%;
     
 }
 
 .balloon-left {
-    left: -50%;
+    left: -45%;
     background-image: url("../resources/img/SVG/Asset\ 4.svg");
     background-size: 100%;
+    background-position: top right;
     content: ".";
     background-repeat: no-repeat;
 }
 
 .balloon-right {
-    right: -50%;
+    right: -45%;
     background-image: url("../resources/img/SVG/Asset\ 6.svg");
     background-size: 100%;
+    background-position: top left;
     content: ".";
     background-repeat: no-repeat;
 }
 
 .flag {
     position: absolute;
-    height: 30vh;
-    width: 30vh;
-    top: 20%;
+    height: 35vh;
+    width: 35vh;
+    top: 40%;
 }
 
 .flag-left {
