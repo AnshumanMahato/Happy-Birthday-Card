@@ -7,7 +7,13 @@
 
 body {
     background-color: #432f70;
-    height: 100vh;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.decoration {
+    position: relative;
+    height: 60vh;
     overflow-x: hidden;
 }
 
