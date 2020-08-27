@@ -17,8 +17,8 @@ body {
 
 .balloon{
     position: absolute;
-    height: 50vh;
-    width: 50vh;
+    height: inherit;
+    width: 90vw;
     top: -2%;
     
 }
@@ -43,8 +43,8 @@ body {
 
 .flag {
     position: absolute;
-    height: 35vh;
-    width: 35vh;
+    height: inherit;
+    width: 65vw;
     top: 20%;
 }
 
@@ -110,4 +110,13 @@ body {
     transform: translate(-50%,-50%);
     height: 150%;
     width: 150%;
+}
+
+.cake {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 70%;
+    width: 70%;
 }
