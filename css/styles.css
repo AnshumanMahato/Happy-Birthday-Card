@@ -7,13 +7,11 @@
 
 body {
     background-color: #432f70;
-    /* height: 100vh; */
-    overflow: hidden;
 }
 
 .decoration {
     position: relative;
-    height: 60vh;
+    height: 100vh;
     overflow-x: hidden;
 }
 
@@ -47,7 +45,7 @@ body {
     position: absolute;
     height: 35vh;
     width: 35vh;
-    top: 40%;
+    top: 20%;
 }
 
 .flag-left {
@@ -66,4 +64,50 @@ body {
     content: ".";
     background-repeat: no-repeat;
 
+}
+
+.frame {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+}
+
+.img-back {
+    position: relative;
+    background-color: #ffa8dc;
+    height:60vw;
+    width: 60vw;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.bd-pic {
+    position: absolute;
+    height: 50vw;
+    width: 50vw;
+    border-color: #fff;
+    border-style: dotted;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+}
+
+.cap {
+    position: absolute;
+    height: 20vw;
+    top: -15%;
+    left: 50%; 
+    transform: translate(-90% -90%) ;
+    z-index: 10;
+}
+
+.confetti {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 150%;
+    width: 150%;
 }
