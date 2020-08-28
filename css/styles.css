@@ -5,19 +5,27 @@
 
 }
 
+html,
 body {
     background-color: #432f70;
 }
 
+.content {
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
 .decoration {
     position: relative;
-    height: 100vh;
+    height: 60vh;
+    width: 100vw;
     overflow: hidden;
 }
 
 .balloon{
     position: absolute;
-    height: inherit;
+    height: 60vh;
     width: 90vw;
     top: -2%;
     
@@ -43,9 +51,9 @@ body {
 
 .flag {
     position: absolute;
-    height: inherit;
+    height: 60vh;
     width: 65vw;
-    top: 20%;
+    top: 35%;
 }
 
 .flag-left {
@@ -67,25 +75,26 @@ body {
 }
 
 .frame {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%) ;
+    position: relative;
+    width: 100vw;
+    transform: translate(0 ,-50%);
+    text-align: center;
+    /* overflow: hidden; */
 }
 
 .img-back {
     position: relative;
+    display: inline-block;
     background-color: #ffa8dc;
-    height:60vw;
-    width: 60vw;
+    height:50vw;
+    width: 50vw;
     border-radius: 50%;
-    text-align: center;
 }
 
 .bd-pic {
     position: absolute;
-    height: 50vw;
-    width: 50vw;
+    height: 83.33333333%;
+    width: 83.33333333%;
     border-color: #fff;
     border-style: dotted;
     border-radius: 50%;
@@ -96,11 +105,9 @@ body {
 
 .cap {
     position: absolute;
-    height: 20vw;
+    height: 33.33333333%;
     top: -15%;
     left: 50%; 
-    transform: translate(-90% -90%) ;
-    z-index: 10;
 }
 
 .confetti {
@@ -119,4 +126,41 @@ body {
     transform: translate(-50%,-50%);
     height: 70%;
     width: 70%;
+}
+
+.HBD-text {
+    position: absolute; 
+    display: inline-block;
+    color: #fff;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+
+.HBD {
+    font-size: 1.5rem;
+    font-family: 'Courgette', cursive;
+}
+
+.name {
+    font-size: 3rem;
+    font-family: 'Courgette', cursive;
+}
+
+
+.blackbox {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    opacity: 0;
+}
+
+.whitebox {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    opacity: 0.5;
 }
