@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#432f70">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#432f70">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#432f70">
 
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/test.css">
     <title>Surprize</title>
 </head>
 <body>
+
+
     <div class="content">
         <div class="decoration"> 
             <div class="balloon balloon-left"></div>
@@ -37,8 +47,30 @@
             </div>    
         </div>
     </div>
-    <!-- <div class="whitebox"></div>
-    <div class="giftbox"></div>
-    <div class="blackbox"></div> -->
+    <div class="whitebox"></div>
+    <div class="giftbox">
+        <p class="gift-text">Ok! Why is it so empty here?</p>
+        <p class="gift-text">Hey look! There's a gift for you</p>
+        <p class="gift-text">C'mon let's open it and see what's in there</p>
+    </div>
+    <div class="blackbox">
+        <p class="bb-text">Hey!</p>
+        <p class="bb-text">Why is it so dark here?</p>
+        <p class="bb-text">Aditi! Can you please switch on the lights?</p>
+    </div>
+
+    <div class="btn switch"></div>
+
+
+     <!-- animation  -->
+
+    <script src="./js/animation.js"></script>
+
+    <!-- bootstrap
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+
 </body>
 </html>
