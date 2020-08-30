@@ -21,7 +21,7 @@ button.addEventListener("click",function(){
     
     if(button.classList.contains("switch")) {
         blackbox.classList.add("fade-in");
-        let light = new Audio("../resources/sfx/switch.mp3");
+        let light = document.querySelector(".switch-aud");
         light.play();
         blackbox.style.opacity = "0";
         button.style.display = "none";
@@ -39,12 +39,12 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("gift")) {
-        let blast = new Audio("../resources/sfx/blast.mp3");
+        let blast = document.querySelector(".blast-aud");
         blast.play();
         giftbox.style.display = "none";
         whitebox.classList.add("fade-in");
         whitebox.style.opacity = "0";
-        let music = new Audio("../resources/sfx/hbd.mp3");
+        let music = document.querySelector(".hbd-aud");
         music.loop = true;
         music.play();
         button.style.display = "none";
