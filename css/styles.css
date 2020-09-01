@@ -12,7 +12,7 @@ body {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .content {
@@ -43,6 +43,7 @@ p {
     background-position: top right;
     content: ".";
     background-repeat: no-repeat;
+    animation: balloon-move 4s linear 0s infinite;
 }
 
 .balloon-right {
@@ -52,6 +53,8 @@ p {
     background-position: top left;
     content: ".";
     background-repeat: no-repeat;
+    animation: balloon-move 4s linear 0s infinite reverse;
+
 }
 
 .flag {
@@ -84,7 +87,8 @@ p {
     width: 100vw;
     transform: translate(0 ,-50%);
     text-align: center;
-    /* overflow: hidden; */
+    opacity: 0;
+    display: none;
 }
 
 .img-back {
@@ -136,7 +140,8 @@ p {
 .HBD-text {
     position: absolute; 
     display: inline-block;
-    top: 90%;
+    width: 65%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%,50%);
 }
@@ -150,6 +155,21 @@ p {
 .name {
     font-size: 3rem;
     padding: 0;
+}
+
+.text-frame {
+    position: relative;
+    transform: translateY(30%);
+    display: inline-block;
+    overflow-y: hidden;
+    height: 40vh;
+    width:70vw
+}
+
+.text-frame p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(0%);
 }
 
 
@@ -182,10 +202,10 @@ p {
     width: 20vw;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    animation: heart-beat 2s linear 0s infinite alternate;
 }
 
 .switch {
@@ -206,19 +226,30 @@ p {
     left: 50%;
     transform: translateX(-50%);
     opacity:0;
+    font-size: 2rem;
 }
 
 
 
 
 /* =======================Animation===================== */
-
+.hidden {
+    display: none;
+}
 .fade-in {
     animation: fade 2s ease-in 0s;
 }
 
+.appear {
+    animation: fade 2s linear 0s 1 reverse;
+}
+
 .read {
     animation: read 4s linear 0s;
+}
+
+.move-up {
+    animation: move-up 60s linear 3s;
 }
 
 
@@ -246,5 +277,47 @@ p {
 
     100%  {
         opacity: 0;
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        transform: translate(-50%,-50%) scale(1,1);
+    }
+
+    50% {
+        transform: translate(-50%,-50%) scale(1.25,1.25);
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(1,1);
+    }
+}
+
+@keyframes balloon-move {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(5%) rotate(3deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0);
+    }
+    75% {
+        transform: translateY(-5%) rotate(-3deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
     }
 }
