@@ -17,7 +17,7 @@ p {
 
 .content {
     position: absolute;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
 }
@@ -141,9 +141,10 @@ p {
     position: absolute; 
     display: inline-block;
     width: 65%;
-    top: 80%;
+    /* height: 100%; */
+    top: 85%;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%,60%);
 }
 
 
@@ -153,13 +154,13 @@ p {
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0;
 }
 
 .text-frame {
     position: relative;
-    transform: translateY(30%);
+    transform: translateY(40%);
     display: inline-block;
     overflow-y: hidden;
     height: 40vh;
@@ -200,7 +201,7 @@ p {
     display: none;
     height: 20vw;
     width: 20vw;
-    top: 50%;
+    top: 60%;
     left: 50%;
     background-repeat: no-repeat;
     background-size: contain;
