@@ -4,15 +4,19 @@
     margin: 0;
 }
 
+html{
+    font-size: 10px;
+}
+
 html,
 body {
-    background-color: #432f70;
+    background-color: #452d64;
     color: #fff;
     font-family: 'Courgette', cursive;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .content {
@@ -20,6 +24,26 @@ p {
     overflow-x: hidden;
     height: 100vh;
     width: 100vw;
+}
+
+body::after {
+    background: url("../resources/img/SVG/Asset\ 11.svg");
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .decoration {
     position: relative;
@@ -85,7 +109,7 @@ p {
 .frame {
     position: relative;
     width: 100vw;
-    transform: translate(0 ,-50%);
+    transform: translate(0 ,-40%);
     text-align: center;
     opacity: 0;
     display: none;
@@ -149,12 +173,12 @@ p {
 
 
 .HBD {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
     padding: 0;
 }
 
 .name {
-    font-size: 2rem;
+    font-size: 3.2rem;
     padding: 0;
 }
 
@@ -192,7 +216,8 @@ p {
 }
 
 .giftbox {
-    background-color: #432f70;
+    background-color: #452d64
+    ;
 }
 
 .switch,
@@ -217,6 +242,20 @@ p {
     background-image: url("../resources/img/SVG/Asset\ 9.svg");
 }
 
+.btn-ref {
+    position: absolute;
+    top:90%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    color:#fff;
+    display: none;
+}
+
+.btn-ref p {
+    font-size: 1.8rem;
+}
+
 .bb-text,
 .gift-text {
     display: inline-block;
@@ -227,7 +266,7 @@ p {
     left: 50%;
     transform: translateX(-50%);
     opacity:0;
-    font-size: 2rem;
+    font-size: 3.2rem;
 }
 
 
@@ -322,3 +361,50 @@ p {
         transform: translateY(-100%);
     }
 }
+
+
+
+/*** Media Queries ***/
+@media only screen and (max-width:330px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width:420px) {
+    html {
+        font-size: 11px;
+    }
+
+}
+
+@media only screen and (min-width:480px) {
+    html {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (min-width:550px) {
+    html {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (min-width:640px) {
+    html {
+        font-size: 17px;
+    }
+
+}
+
+/* @media only screen and (orientation: landscape) {
+    body {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+} */

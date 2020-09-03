@@ -18,8 +18,11 @@ let frames = document.querySelectorAll(".frame"),
 for(let i = 0; i < blackText.length; i++) {
     setTimeout(()=>{
         blackText[i].classList.add("read");
-        if(i === blackText.length - 1)
+        if(i === blackText.length - 1){
             button.style.display = "inline-block";
+            document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
+            document.querySelector(".btn-ref").style.display = "block";
+        }
     },5000*i);
     
 }
@@ -33,14 +36,18 @@ button.addEventListener("click",function(){
         light.play();
         blackbox.style.opacity = "0";
         button.style.display = "none";
+        document.querySelector(".btn-ref").style.display = "none";
+        document.querySelector(".btn-ref p").innerHTML = "Click the Gift Box.";
         setTimeout(function() {
             button.classList.add("gift");
             blackbox.style.display = "none";
             for(let j = 0; j < giftText.length; j++) {
                 setTimeout(()=>{
                     giftText[j].classList.add("read");
-                    if(j === giftText.length - 2)
+                    if(j === giftText.length - 2){
                         button.style.display = "inline-block";
+                        document.querySelector(".btn-ref").style.display = "block";
+                    } 
                 },5000*j);
             } 
         },4000);
@@ -51,6 +58,7 @@ button.addEventListener("click",function(){
         let blast = document.querySelector(".blast-aud");
         blast.play();
         giftbox.style.display = "none";
+        document.querySelector(".btn-ref").style.display = "none";
         whitebox.classList.add("fade-in");
         whitebox.style.opacity = "0";
         let music = document.querySelector(".hbd-aud");
