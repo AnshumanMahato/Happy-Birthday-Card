@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#432f70">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#432f70">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#432f70">
 
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/test.css">
     <title>Surprize</title>
 </head>
 <body>
+
+    <!-- Sfx calling -->
+
+    <audio class="blast-aud">
+        <source src="./resources/sfx/blast.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio class="hbd-aud">
+        <source src="./resources/sfx/hbd.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio class="switch-aud">
+        <source src="./resources/sfx/switch.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+
     <div class="content">
         <div class="decoration"> 
             <div class="balloon balloon-left"></div>
@@ -17,7 +42,7 @@
             <div class="flag flag-left"></div>
             <div class="flag flag-right"></div>
         </div>  
-        <div class="frame">
+        <div class="frame frame1">
             <div class="img-back">
                 <img class="bd-pic" src="./resources/img/Asset 1-100.jpg" alt="" srcset="">
                 <img class="cap" src="./resources/img/SVG/Asset 7.svg" alt="">
@@ -32,13 +57,49 @@
                 </div>
             </div>
             <div class="HBD-text">
-                <p class="HBD">Happy Birthday</p>
+                <p class="HBD">May your soul rest in peace</p>
                 <p class="name">Hildul</p>
             </div>    
         </div>
+        <div class="frame frame2">
+            <div class="text-frame">
+                <p>
+                    Congratulations! Today, one more year got added to your age. Soon, you'll be 25, then 
+                    30, then 35, then 40 and so on. And, if things go right for you then, in the meantime, 
+                    you'll be achieveing your goals, getting married, having kids, see your kids marry, 
+                    have grandchildren, and if you are lucky enough, you'll see your grandchildren marry 
+                    as well. And then eventually, you'll die. But mind you, these will only happen if things 
+                    go right for you. Things might go wrong for you, and maybe some night you might get 
+                    extremely drunk and jump off the terrace of a building thinking it's a swimming pool 
+                    down there and die in a hard way. No matter what, but eventually, you're going to die. 
+                    And today, you are officially one year closer to your death. Being a friend of yours, 
+                    I would like to express my condolence upon your death. But maybe, by the time you die, 
+                    we might not be in contact with one another. So today, in the name of your oncoming death, 
+                    I wholeheartedly express my grief in advance... 
+                </p>    
+            </div>
+        </div>
     </div>
-    <!-- <div class="whitebox"></div>
-    <div class="giftbox"></div>
-    <div class="blackbox"></div> -->
+
+    <div class="whitebox"></div>
+    <div class="giftbox">
+        <p class="gift-text">Ok! Why is it so empty here?</p>
+        <p class="gift-text">Hey look! There's a gift for you</p>
+        <p class="gift-text">C'mon let's open it and see what's in there</p>
+    </div>
+    <div class="blackbox">
+        <p class="bb-text">Hey!</p>
+        <p class="bb-text">Why is it so dark here?</p>
+        <p class="bb-text">Aditi! Can you please switch on the lights?</p>
+    </div>
+
+    <div class="btn switch"></div>
+    <div class="btn-ref"><p></p></div>
+
+
+     <!-- animation    -->
+
+    <script src="./js/animation.js"></script>
+
 </body>
 </html>
