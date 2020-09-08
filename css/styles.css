@@ -184,7 +184,7 @@ body::after {
 
 .text-frame {
     position: relative;
-    transform: translateY(40%);
+    transform: translateY(30%);
     display: inline-block;
     overflow-y: hidden;
     height: 40vh;
