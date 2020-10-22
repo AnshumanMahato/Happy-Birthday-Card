@@ -200,7 +200,8 @@ body::after {
 
 .blackbox,
 .whitebox,
-.giftbox {
+.giftbox,
+.empty-room {
     text-align: center;
     position: absolute;
     height: 100vh;
@@ -215,13 +216,16 @@ body::after {
     background-color: #fff;
 }
 
-.giftbox {
+.giftbox,
+.empty-room {
     background-color: #452d64
     ;
 }
 
 .switch,
-.gift {
+.gift,
+.door-in,
+.door-out {
     position: absolute;
     display: none;
     height: 20vw;
@@ -240,6 +244,11 @@ body::after {
 
 .gift {
     background-image: url("../resources/img/SVG/Asset\ 9.svg");
+}
+
+.door-in,
+.door-out {
+    background-image: url("../resources/img/SVG/Asset\ 12.svg");
 }
 
 .btn-ref {
@@ -273,7 +282,6 @@ body::after {
 
 .hallway{
     overflow: hidden;
-    display: none;
 }
 
 .hall{
@@ -284,8 +292,6 @@ body::after {
     transform: translate(-50%,-50%);
     
 }
-
-
 
 
 /* =======================Animation===================== */
@@ -305,7 +311,7 @@ body::after {
 }
 
 .move-up {
-    animation: move-up 60s linear 3s;
+    animation: move-up 70s linear 3s;
 }
 
 
