@@ -19,6 +19,14 @@ let blackText = document.querySelectorAll(".bb-text"), // msgs in the dark room 
 let frames = document.querySelectorAll(".frame"), // this one has the message frame in [0] and card fram in [1]
     msg = document.querySelector(".text-frame p"); // the Message para
 
+//Sfx files
+
+let light = document.querySelector(".switch-aud"),
+    blast = document.querySelector(".blast-aud"),
+    door = document.querySelector(".door-aud"),
+    haunt = document.querySelector(".haunt-aud"),
+    music = document.querySelector(".hbd-aud");
+
 //Animation Code
 
 /*
@@ -46,7 +54,6 @@ button.addEventListener("click",function(){
     if(button.classList.contains("switch")) {
 
         blackbox.classList.add("fade-in");
-        let light = document.querySelector(".switch-aud");
         light.play();
         blackbox.style.opacity = "0";
         button.style.display = "none";
@@ -70,10 +77,13 @@ button.addEventListener("click",function(){
 
     else if(button.classList.contains("door-out")) {
         room.classList.add("fade-in");
+        door.play();
         room.style.opacity = "0";
         button.style.display = "none";
         document.querySelector(".btn-ref").style.display = "none";
         setTimeout(function() {
+            haunt.play();
+            haunt.loop = true;
             button.classList.add("door-in");
             button.classList.remove("door-out");
             room.style.display = "none";
@@ -91,6 +101,7 @@ button.addEventListener("click",function(){
 
     else if(button.classList.contains("door-in")) {
         hallway.classList.add("fade-in");
+        door.play();
         hallway.style.opacity = "0";
         button.style.display = "none";
         document.querySelector(".btn-ref").style.display = "none";
@@ -112,14 +123,13 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("gift")) {
-        
-        let blast = document.querySelector(".blast-aud");
+        haunt.pause();
         blast.play();
         giftbox.style.display = "none";
         document.querySelector(".btn-ref").style.display = "none";
         whitebox.classList.add("fade-in");
         whitebox.style.opacity = "0";
-        let music = document.querySelector(".hbd-aud");
+       
         music.loop = true;
         music.play();
         button.style.display = "none";
