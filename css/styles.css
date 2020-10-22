@@ -257,7 +257,9 @@ body::after {
 }
 
 .bb-text,
-.gift-text {
+.gift-text,
+.hall-text,
+.room-text {
     display: inline-block;
     text-align: center;
     position: absolute;
