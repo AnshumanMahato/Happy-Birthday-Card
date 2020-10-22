@@ -269,6 +269,21 @@ body::after {
     font-size: 3.2rem;
 }
 
+.hallway{
+    overflow: hidden;
+}
+
+.hall{
+    height: 140%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.ghost {
+    position: absolute;
+}
 
 
 
