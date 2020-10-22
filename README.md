@@ -1,2 +1,2 @@
-# HBD-Template
-This is a template for a birthday card. Final set of animations have been added. Message and pic has also been finalized. **Only mobile portrait view is available.**
+# HBD-Template 0.2
+This is a template for a birthday card. In this version an additional haunted halway scene has been added. **Only mobile portrait view is available.**
