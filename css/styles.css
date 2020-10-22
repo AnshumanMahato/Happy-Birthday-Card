@@ -273,6 +273,7 @@ body::after {
 
 .hallway{
     overflow: hidden;
+    display: none;
 }
 
 .hall{
@@ -281,11 +282,9 @@ body::after {
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    
 }
 
-.ghost {
-    position: absolute;
-}
 
 
 
