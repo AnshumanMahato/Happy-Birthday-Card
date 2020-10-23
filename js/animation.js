@@ -34,6 +34,8 @@ let light = document.querySelector(".switch-aud"),
     one by one, a button(bulb) appears and the user is asked to click the button to swith on the lights.
 */ 
 
+document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
+
 for(let i = 0; i < blackText.length; i++) {  // this loop goes through all the blacktext msgs
     setTimeout(() => {  // A timeout of 5s ia applied to all blactext elements so that appear successively one after the other
         
@@ -41,7 +43,6 @@ for(let i = 0; i < blackText.length; i++) {  // this loop goes through all the b
 
         if(i === blackText.length - 1){             // this ensures that the button appears only after the last text is displayed.
             button.style.display = "inline-block";
-            document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
             document.querySelector(".btn-ref").style.display = "block";
         }
 
