@@ -27,6 +27,33 @@ let light = document.querySelector(".switch-aud"),
     haunt = document.querySelector(".haunt-aud"),
     music = document.querySelector(".hbd-aud");
 
+//  readMsg() displays the paras in each scene successively. It takes an array of the para elements as input.
+
+let readMsg = (text) => {
+
+    for(let i = 0; i < text.length; i++) {  // this loop goes through all the text msg paras
+        setTimeout(() => {  // A timeout of 5s ia applied to all text elements so that appear successively one after the other
+            
+            text[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements   
+            if(i === text.length - 1){             // this ensures that the button appears only after the last text is displayed.
+                button.style.display = "inline-block";
+                document.querySelector(".btn-ref").style.display = "block";
+            }
+    
+        },5000*i);
+        
+    }
+};
+
+// transition() is animation for change from one scene to another. It takes the current scene div element as input.qq
+
+let transition = (currentScene) => {
+    currentScene.classList.add("fade-in");
+    currentScene.style.opacity = "0";
+    button.style.display = "none";
+    document.querySelector(".btn-ref").style.display = "none";       
+};
+
 //Animation Code
 
 /*
@@ -36,106 +63,82 @@ let light = document.querySelector(".switch-aud"),
 
 document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
 
-for(let i = 0; i < blackText.length; i++) {  // this loop goes through all the blacktext msgs
-    setTimeout(() => {  // A timeout of 5s ia applied to all blactext elements so that appear successively one after the other
-        
-        blackText[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements
-
-        if(i === blackText.length - 1){             // this ensures that the button appears only after the last text is displayed.
-            button.style.display = "inline-block";
-            document.querySelector(".btn-ref").style.display = "block";
-        }
-
-    },5000*i);
-    
-}
+readMsg(blackText);
 
 button.addEventListener("click",function(){
     
     if(button.classList.contains("switch")) {
 
-        blackbox.classList.add("fade-in");
+        /* 
+            When the switch is pressed, the black div will wipe out and the backgroung scene with no 
+            elements will appear, signifying that the lights are turned on and the room is empty. Then 
+            the msg will be displayed after which, the user will be asked to move out and the button with
+            door icon will appear. 
+        */
+
         light.play();
-        blackbox.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(blackbox);
         document.querySelector(".btn-ref p").innerHTML = "Click the Door";
         setTimeout(function() {
             button.classList.add("door-out");
             button.classList.remove("switch");
             blackbox.style.display = "none";
-            for(let j = 0; j < roomText.length; j++) {
-                setTimeout(()=>{
-                    roomText[j].classList.add("read");
-                    if(j === roomText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(roomText); 
         },4000);
     }
 
     else if(button.classList.contains("door-out")) {
-        room.classList.add("fade-in");
+
+        /* 
+            when the door is pressed, scene changes to hallway. Again, the msg will be displayed, after 
+            which, the user will be asked to come inside and the button with door will appear again.
+        */
+        
         door.play();
-        room.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(room);
         setTimeout(function() {
             haunt.play();
             haunt.loop = true;
             button.classList.add("door-in");
             button.classList.remove("door-out");
             room.style.display = "none";
-            for(let j = 0; j < hallText.length; j++) {
-                setTimeout(()=>{
-                    hallText[j].classList.add("read");
-                    if(j === hallText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(hallText); 
         },4000);
     }
 
     else if(button.classList.contains("door-in")) {
-        hallway.classList.add("fade-in");
+
+        /* 
+            when the door is pressed, scene changes to the gift room. Again, the msg will be displayed, after 
+            which, the user will be asked to open the gift and the button with gift will appear.
+        */
+        
         door.play();
-        hallway.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(hallway);
         document.querySelector(".btn-ref p").innerHTML = "Click the Gift";
         setTimeout(function() {
             button.classList.add("gift");
             button.classList.remove("door-in");
             hallway.style.display = "none";
-            for(let j = 0; j < giftText.length; j++) {
-                setTimeout(()=>{
-                    giftText[j].classList.add("read");
-                    if(j === giftText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(giftText);
         },4000);
     }
 
     else if(button.classList.contains("gift")) {
+
+        /* 
+            when the gift is pressed, the gift scene vanishes and the white div fades slowly giving a sense 
+            of explosion. After that, the message frame appears and moves up until the message completes. Then,
+            the message frame fades away and the card appears.
+        */
+       
         haunt.pause();
         blast.play();
         giftbox.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
-        whitebox.classList.add("fade-in");
-        whitebox.style.opacity = "0";
+        transition(whitebox);
        
         music.loop = true;
         music.play();
-        button.style.display = "none";
-
-        //test 
 
         frames[1].style.display = "block";
 
@@ -165,30 +168,3 @@ button.addEventListener("click",function(){
     }
 
 });
-
-
-
-
-
-
-
-
-
-
-/*
-
-setTimeout(function() {
-            button.classList.add("gift");
-            blackbox.style.display = "none";
-            for(let j = 0; j < giftText.length; j++) {
-                setTimeout(()=>{
-                    giftText[j].classList.add("read");
-                    if(j === giftText.length - 2){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
-        },4000);
-
-*/
