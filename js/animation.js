@@ -27,13 +27,14 @@ let light = document.querySelector(".switch-aud"),
     haunt = document.querySelector(".haunt-aud"),
     music = document.querySelector(".hbd-aud");
 
+//  readMsg() displays the paras in each scene successively. It takes an array of the para elements as input.
+
 let readMsg = (text) => {
 
     for(let i = 0; i < text.length; i++) {  // this loop goes through all the text msg paras
         setTimeout(() => {  // A timeout of 5s ia applied to all text elements so that appear successively one after the other
             
-            text[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements
-    
+            text[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements   
             if(i === text.length - 1){             // this ensures that the button appears only after the last text is displayed.
                 button.style.display = "inline-block";
                 document.querySelector(".btn-ref").style.display = "block";
@@ -43,6 +44,8 @@ let readMsg = (text) => {
         
     }
 };
+
+// transition() is animation for change from one scene to another. It takes the current scene div element as input.qq
 
 let transition = (currentScene) => {
     currentScene.classList.add("fade-in");
@@ -66,6 +69,13 @@ button.addEventListener("click",function(){
     
     if(button.classList.contains("switch")) {
 
+        /* 
+            When the switch is pressed, the black div will wipe out and the backgroung scene with no 
+            elements will appear, signifying that the lights are turned on and the room is empty. Then 
+            the msg will be displayed after which, the user will be asked to move out and the button with
+            door icon will appear. 
+        */
+
         light.play();
         transition(blackbox);
         document.querySelector(".btn-ref p").innerHTML = "Click the Door";
@@ -78,6 +88,11 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("door-out")) {
+
+        /* 
+            when the door is pressed, scene changes to hallway. Again, the msg will be displayed, after 
+            which, the user will be asked to come inside and the button with door will appear again.
+        */
         
         door.play();
         transition(room);
@@ -92,6 +107,11 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("door-in")) {
+
+        /* 
+            when the door is pressed, scene changes to the gift room. Again, the msg will be displayed, after 
+            which, the user will be asked to open the gift and the button with gift will appear.
+        */
         
         door.play();
         transition(hallway);
@@ -105,6 +125,13 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("gift")) {
+
+        /* 
+            when the gift is pressed, the gift scene vanishes and the white div fades slowly giving a sense 
+            of explosion. After that, the message frame appears and moves up until the message completes. Then,
+            the message frame fades away and the card appears.
+        */
+       
         haunt.pause();
         blast.play();
         giftbox.style.display = "none";
@@ -112,9 +139,6 @@ button.addEventListener("click",function(){
        
         music.loop = true;
         music.play();
-        
-
-        //test 
 
         frames[1].style.display = "block";
 
@@ -144,30 +168,3 @@ button.addEventListener("click",function(){
     }
 
 });
-
-
-
-
-
-
-
-
-
-
-/*
-
-setTimeout(function() {
-            button.classList.add("gift");
-            blackbox.style.display = "none";
-            for(let j = 0; j < giftText.length; j++) {
-                setTimeout(()=>{
-                    giftText[j].classList.add("read");
-                    if(j === giftText.length - 2){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
-        },4000);
-
-*/
