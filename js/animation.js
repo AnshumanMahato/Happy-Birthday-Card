@@ -44,6 +44,13 @@ let readMsg = (text) => {
     }
 };
 
+let transition = (currentScene) => {
+    currentScene.classList.add("fade-in");
+    currentScene.style.opacity = "0";
+    button.style.display = "none";
+    document.querySelector(".btn-ref").style.display = "none";       
+};
+
 //Animation Code
 
 /*
@@ -59,11 +66,8 @@ button.addEventListener("click",function(){
     
     if(button.classList.contains("switch")) {
 
-        blackbox.classList.add("fade-in");
         light.play();
-        blackbox.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(blackbox);
         document.querySelector(".btn-ref p").innerHTML = "Click the Door";
         setTimeout(function() {
             button.classList.add("door-out");
@@ -74,11 +78,9 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("door-out")) {
-        room.classList.add("fade-in");
+        
         door.play();
-        room.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(room);
         setTimeout(function() {
             haunt.play();
             haunt.loop = true;
@@ -90,11 +92,9 @@ button.addEventListener("click",function(){
     }
 
     else if(button.classList.contains("door-in")) {
-        hallway.classList.add("fade-in");
+        
         door.play();
-        hallway.style.opacity = "0";
-        button.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
+        transition(hallway);
         document.querySelector(".btn-ref p").innerHTML = "Click the Gift";
         setTimeout(function() {
             button.classList.add("gift");
@@ -108,13 +108,11 @@ button.addEventListener("click",function(){
         haunt.pause();
         blast.play();
         giftbox.style.display = "none";
-        document.querySelector(".btn-ref").style.display = "none";
-        whitebox.classList.add("fade-in");
-        whitebox.style.opacity = "0";
+        transition(whitebox);
        
         music.loop = true;
         music.play();
-        button.style.display = "none";
+        
 
         //test 
 
