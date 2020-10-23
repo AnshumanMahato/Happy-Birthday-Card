@@ -27,6 +27,23 @@ let light = document.querySelector(".switch-aud"),
     haunt = document.querySelector(".haunt-aud"),
     music = document.querySelector(".hbd-aud");
 
+let readMsg = (text) => {
+
+    for(let i = 0; i < text.length; i++) {  // this loop goes through all the text msg paras
+        setTimeout(() => {  // A timeout of 5s ia applied to all text elements so that appear successively one after the other
+            
+            text[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements
+    
+            if(i === text.length - 1){             // this ensures that the button appears only after the last text is displayed.
+                button.style.display = "inline-block";
+                document.querySelector(".btn-ref").style.display = "block";
+            }
+    
+        },5000*i);
+        
+    }
+};
+
 //Animation Code
 
 /*
@@ -36,19 +53,7 @@ let light = document.querySelector(".switch-aud"),
 
 document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
 
-for(let i = 0; i < blackText.length; i++) {  // this loop goes through all the blacktext msgs
-    setTimeout(() => {  // A timeout of 5s ia applied to all blactext elements so that appear successively one after the other
-        
-        blackText[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements
-
-        if(i === blackText.length - 1){             // this ensures that the button appears only after the last text is displayed.
-            button.style.display = "inline-block";
-            document.querySelector(".btn-ref").style.display = "block";
-        }
-
-    },5000*i);
-    
-}
+readMsg(blackText);
 
 button.addEventListener("click",function(){
     
@@ -64,15 +69,7 @@ button.addEventListener("click",function(){
             button.classList.add("door-out");
             button.classList.remove("switch");
             blackbox.style.display = "none";
-            for(let j = 0; j < roomText.length; j++) {
-                setTimeout(()=>{
-                    roomText[j].classList.add("read");
-                    if(j === roomText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(roomText); 
         },4000);
     }
 
@@ -88,15 +85,7 @@ button.addEventListener("click",function(){
             button.classList.add("door-in");
             button.classList.remove("door-out");
             room.style.display = "none";
-            for(let j = 0; j < hallText.length; j++) {
-                setTimeout(()=>{
-                    hallText[j].classList.add("read");
-                    if(j === hallText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(hallText); 
         },4000);
     }
 
@@ -111,15 +100,7 @@ button.addEventListener("click",function(){
             button.classList.add("gift");
             button.classList.remove("door-in");
             hallway.style.display = "none";
-            for(let j = 0; j < giftText.length; j++) {
-                setTimeout(()=>{
-                    giftText[j].classList.add("read");
-                    if(j === giftText.length - 1){
-                        button.style.display = "inline-block";
-                        document.querySelector(".btn-ref").style.display = "block";
-                    } 
-                },5000*j);
-            } 
+            readMsg(giftText);
         },4000);
     }
 
