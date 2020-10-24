@@ -90,7 +90,7 @@ button.addEventListener("click",function(){
     else if(button.classList.contains("door-out")) {
 
         /* 
-            when the door is pressed, scene changes to hallway. Again, the msg will be displayed, after 
+            when the door is pressed, scene changes to cemetry. Again, the msg will be displayed, after 
             which, the user will be asked to come inside and the button with door will appear again.
         */
         
