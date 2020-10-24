@@ -285,7 +285,7 @@ body::after {
 }
 
 .hall{
-    height: 140%;
+    height: 100%;
     position: absolute;
     top:50%;
     left:50%;
