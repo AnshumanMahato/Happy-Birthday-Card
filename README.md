@@ -1,2 +1,11 @@
-# HBD-Template v0.1
-This is a template for a birthday card. Final set of animations have been added. Message and pic has also been finalized. **Only mobile portrait view is available.**
+# HBD-Template v0.2
+
+This is a template for a birthday card. In this version an FEATURES an additional haunted halway scene has been added. **Only mobile portrait view is available.**
+</br>
+
+## Atributions
+- <a href='https://www.freepik.com/vectors/pattern'>Pattern vector created by mokoland - www.freepik.com</a>
+- <a href='https://www.freepik.com/vectors/business'>Business vector created by freepik - www.freepik.com</a>
+- <a href='https://www.freepik.com/vectors/christmas'>Christmas vector created by freepik - www.freepik.com</a>
+- <a href='https://www.freepik.com/vectors/background'>Background vector created by brgfx - www.freepik.com</a>
+- <a href='https://www.freepik.com/vectors/halloween'>Halloween vector created by vectorpouch - www.freepik.com</a>

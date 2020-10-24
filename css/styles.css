@@ -200,7 +200,8 @@ body::after {
 
 .blackbox,
 .whitebox,
-.giftbox {
+.giftbox,
+.empty-room {
     text-align: center;
     position: absolute;
     height: 100vh;
@@ -215,13 +216,16 @@ body::after {
     background-color: #fff;
 }
 
-.giftbox {
+.giftbox,
+.empty-room {
     background-color: #452d64
     ;
 }
 
 .switch,
-.gift {
+.gift,
+.door-in,
+.door-out {
     position: absolute;
     display: none;
     height: 20vw;
@@ -242,6 +246,11 @@ body::after {
     background-image: url("../resources/img/SVG/Asset\ 9.svg");
 }
 
+.door-in,
+.door-out {
+    background-image: url("../resources/img/SVG/Asset\ 12.svg");
+}
+
 .btn-ref {
     position: absolute;
     top:90%;
@@ -257,7 +266,9 @@ body::after {
 }
 
 .bb-text,
-.gift-text {
+.gift-text,
+.hall-text,
+.room-text {
     display: inline-block;
     text-align: center;
     position: absolute;
@@ -269,10 +280,22 @@ body::after {
     font-size: 3.2rem;
 }
 
+.hallway{
+    overflow: hidden;
+}
 
+.hall{
+    height: 140%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
 
 
 /* =======================Animation===================== */
+
 .hidden {
     display: none;
 }
@@ -289,7 +312,7 @@ body::after {
 }
 
 .move-up {
-    animation: move-up 60s linear 3s;
+    animation: move-up 70s linear 3s;
 }
 
 
