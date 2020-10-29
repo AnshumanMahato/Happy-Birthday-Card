@@ -10,7 +10,7 @@ html{
 
 html,
 body {
-    background-color: #452d64;
+    background-color: #141852;
     color: #fff;
     font-family: 'Courgette', cursive;
 }
@@ -218,7 +218,7 @@ body::after {
 
 .giftbox,
 .empty-room {
-    background-color: #452d64
+    background-color: #141852
     ;
 }
 
