@@ -156,14 +156,14 @@ button.addEventListener("click",function(){
         setTimeout(() => {
             document.querySelector(".text-frame").classList.add("fade-in");
             document.querySelector(".text-frame").style.opacity = '0';
-        },78000);
+        },88000);
 
         setTimeout(() => {
             frames[1].style.display = "none";
             frames[0].style.display = "block";
             frames[0].classList.add("appear");
             frames[0].style.opacity = "1";
-        },81000);
+        },91000);
 
     }
 
