@@ -4,6 +4,7 @@ This is a template for a birthday card. In this version an additional haunted ha
 </br>
 
 ## Atributions
+
 - <a href='https://www.freepik.com/vectors/pattern'>Pattern vector created by mokoland - www.freepik.com</a>
 - <a href='https://www.freepik.com/vectors/business'>Business vector created by freepik - www.freepik.com</a>
 - <a href='https://www.freepik.com/vectors/christmas'>Christmas vector created by freepik - www.freepik.com</a>
