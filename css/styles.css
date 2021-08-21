@@ -112,10 +112,10 @@ body::after {
 .frame {
     position: relative;
     width: 100vw;
-    transform: translate(0 ,-40%);
+    /* transform: translate(0 ,-40%); */
     text-align: center;
-    opacity: 0;
-    display: none;
+    /* opacity: 0; */
+    /* display: none; */
 }
 
 .img-back {
@@ -187,7 +187,7 @@ body::after {
 
 .text-frame {
     position: relative;
-    transform: translateY(30%);
+    /* transform: translateY(30%); */
     display: inline-block;
     overflow-y: hidden;
     height: 40vh;
