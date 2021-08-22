@@ -1,22 +1,4 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 
-html{
-    font-size: 10px;
-}
-
-html,
-body {
-    background-image:url("../resources/img/SVG/Asset\ 14.webp");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 200vw 200vw;
-    color: #fff;
-    font-family: 'Courgette', cursive;
-}
 
 p {
     font-size: 2.4rem;
@@ -48,66 +30,7 @@ body::after {
     -webkit-background-size: cover;
     background-size: cover;
 }
-.decoration {
-    position: relative;
-    height: 60vh;
-    width: 100vw;
-    overflow: hidden;
-}
 
-.balloon{
-    position: absolute;
-    height: 60vh;
-    width: 90vw;
-    top: -2%;
-    
-}
-
-.balloon-left {
-    left: -45%;
-    background-image: url("../resources/img/SVG/Asset\ 4.svg");
-    background-size: 100%;
-    background-position: top right;
-    content: ".";
-    background-repeat: no-repeat;
-    animation: balloon-move 4s linear 0s infinite;
-}
-
-.balloon-right {
-    right: -45%;
-    background-image: url("../resources/img/SVG/Asset\ 6.svg");
-    background-size: 100%;
-    background-position: top left;
-    content: ".";
-    background-repeat: no-repeat;
-    animation: balloon-move 4s linear 0s infinite reverse;
-
-}
-
-.flag {
-    position: absolute;
-    height: 60vh;
-    width: 65vw;
-    top: 35%;
-}
-
-.flag-left {
-    left: -10%;
-    background-image: url("../resources/img/SVG/Asset\ 2.svg");
-    background-size: 100%;
-    content: ".";
-    background-repeat: no-repeat;
-
-}
-
-.flag-right {
-    right: -10%;
-    background-image: url("../resources/img/SVG/Asset\ 5.svg");
-    background-size: 100%;
-    content: ".";
-    background-repeat: no-repeat;
-
-}
 
 .frame {
     position: relative;
