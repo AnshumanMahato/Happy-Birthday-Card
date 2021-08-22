@@ -1,0 +1,23 @@
+{
+  "name": "happy-birthday-card",
+  "version": "2.0.1",
+  "description": "A birthday card template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnshumanMahato/Happy-Birthday-Card.git"
+  },
+  "keywords": [
+    "happy-birthday",
+    "birthday-card"
+  ],
+  "author": "Anshuman Mahato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnshumanMahato/Happy-Birthday-Card/issues"
+  },
+  "homepage": "https://github.com/AnshumanMahato/Happy-Birthday-Card#readme"
+}
