@@ -20,7 +20,7 @@ body{
 .content{
     display: grid;
 
-    grid-template-columns: 10vw repeat(4,1fr) 10vw;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: 30vh 70vh;
 
     & > * {

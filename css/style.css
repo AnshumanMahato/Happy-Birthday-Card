@@ -19,11 +19,41 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: 10vw repeat(4, 1fr) 10vw;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30vh 70vh;
 }
 .content > * {
   width: 100%;
+}
+
+.balloon {
+  grid-row: 1/-1;
+  width: 130%;
+  z-index: 1;
+}
+.balloon--left {
+  grid-column: 1/2;
+}
+.balloon--right {
+  grid-column: 4/5;
+  transform: translateX(-20%);
+}
+
+.flag {
+  grid-row: 1/2;
+  z-index: 0;
+}
+.flag--c-left {
+  grid-column: 2/3;
+}
+.flag--c-right {
+  grid-column: 3/4;
+}
+.flag--left {
+  grid-column: 1/2;
+}
+.flag--right {
+  grid-column: 4/5;
 }
 
 /*# sourceMappingURL=style.css.map */

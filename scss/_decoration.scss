@@ -1,0 +1,35 @@
+.balloon{
+    grid-row: 1 / -1;
+    width: 130%;
+    z-index: 1;
+    
+    &--left {
+        grid-column: 1/2;
+    }
+
+    &--right {
+        grid-column: 4/5;
+        transform: translateX(-20%);
+    }
+}
+
+.flag {
+    grid-row: 1/2;
+    z-index: 0;
+
+    &--c-left {
+        grid-column: 2/3;
+    }
+
+    &--c-right {
+        grid-column: 3/4;
+    }
+
+    &--left{
+        grid-column: 1/2;
+    }
+
+    &--right{
+        grid-column: 4/5;
+    }
+}
