@@ -28,6 +28,63 @@ body {
   width: 100%;
 }
 
+.img-back {
+  position: relative;
+  background-color: #ffa8dc;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+}
+
+.bd-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 83.33333333%;
+  width: 83.33333333%;
+  border-color: #fff;
+  border-style: dotted;
+  border-radius: 50%;
+}
+
+.cap {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translate(0, 0);
+  height: 33.33333333%;
+  top: -15%;
+}
+
+.confetti {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150%;
+  width: 150%;
+}
+
+.cake {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+}
+
+.HBD {
+  font-size: 2.4rem;
+  padding: 0;
+}
+
+.name {
+  font-size: 3.2rem;
+  padding: 0;
+}
+
 .balloon {
   grid-row: 1/-1;
   width: 130%;
@@ -56,6 +113,16 @@ body {
 }
 .flag--right {
   grid-column: 4/5;
+}
+
+.frame {
+  grid-row: 2/3;
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

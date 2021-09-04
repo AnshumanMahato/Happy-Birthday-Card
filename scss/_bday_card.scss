@@ -1,0 +1,48 @@
+.img-back {
+    position: relative;
+    background-color: #ffa8dc;
+    height:20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.bd-pic {
+    @include center;
+
+    height: 83.33333333%;
+    width: 83.33333333%;
+    border-color: #fff;
+    border-style: dotted;
+    border-radius: 50%;
+}
+
+.cap {
+    @include center(-15%,50%,0,0);
+
+    height: 33.33333333%;
+    top: -15%;
+}
+
+.confetti {
+    @include center;
+
+    height: 150%;
+    width: 150%;
+}
+
+.cake {
+    @include center(90%);
+    height: 70%;
+    width: 70%;
+}
+
+
+.HBD {
+    font-size: 2.4rem;
+    padding: 0;
+}
+
+.name {
+    font-size: 3.2rem;
+    padding: 0;
+}
