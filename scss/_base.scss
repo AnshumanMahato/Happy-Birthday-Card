@@ -16,16 +16,3 @@ body{
     font-family: 'Courgette', cursive;
     background-color: black;
 }
-
-.content{
-    height: 100vh;
-    overflow: hidden;
-
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 30vh 70vh;
-
-    & > * {
-        width: 100%;
-    }
-}

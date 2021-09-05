@@ -5,22 +5,6 @@ p {
 }
 
 
-.text-frame {
-    position: relative;
-    /* transform: translateY(30%); */
-    display: inline-block;
-    overflow-y: hidden;
-    height: 40vh;
-    width:70vw
-}
-
-.text-frame p {
-    position: absolute;
-    top: 50%;
-    transform: translateY(0%);
-}
-
-
 .blackbox,
 .whitebox,
 .giftbox,
