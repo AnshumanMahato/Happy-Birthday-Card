@@ -7,11 +7,13 @@
     
     &--left {
         grid-column: 1/2;
+        animation: balloon-move 4s linear 0s infinite
     }
 
     &--right {
         grid-column: 4/5;
-        transform: translateX(-20%);
+        margin-left: -20%;
+        animation: balloon-move 4s linear 0s infinite reverse;
     }
 }
 
