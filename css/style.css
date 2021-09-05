@@ -120,7 +120,7 @@ body {
   grid-column: 2/4;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
