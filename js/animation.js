@@ -12,12 +12,14 @@ let button = document.querySelector(".btn"),
 let blackText = document.querySelectorAll(".bb-text"), // msgs in the dark room scene
     giftText = document.querySelectorAll(".gift-text"), // msgs in the gift scene
     hallText = document.querySelectorAll(".hall-text"), // msgs in the hallway scene
-    roomText = document.querySelectorAll(".room-text"); // msgs in empty room scene 
+    roomText = document.querySelectorAll(".room-text"), // msgs in empty room scene 
+    CTAtext = document.querySelector(".btn-ref");
 
 //Elements in the card page
 
-let frames = document.querySelectorAll(".frame"), // this one has the message frame in [0] and card fram in [1]
-    msg = document.querySelector(".text-frame p"); // the Message para
+let frames = document.querySelectorAll(".frame"),
+    msgWindow = document.querySelector(".scroll"),// this one has the message frame in [0] and card fram in [1]
+    msg = document.querySelector(".scroll p"); // the Message para
 
 //Sfx files
 
@@ -37,7 +39,7 @@ let readMsg = (text) => {
             text[i].classList.add("read");    // this adds a fadeIn-fadeOut animation to elements   
             if(i === text.length - 1){             // this ensures that the button appears only after the last text is displayed.
                 button.style.display = "inline-block";
-                document.querySelector(".btn-ref").style.display = "block";
+                CTAtext.style.display = "block";
             }
     
         },5000*i);
@@ -45,7 +47,7 @@ let readMsg = (text) => {
     }
 };
 
-// transition() is animation for change from one scene to another. It takes the current scene div element as input.qq
+// transition() is animation for change from one scene to another. It takes the current scene div element as input.
 
 let transition = (currentScene) => {
     currentScene.classList.add("fade-in");
@@ -61,7 +63,7 @@ let transition = (currentScene) => {
     one by one, a button(bulb) appears and the user is asked to click the button to swith on the lights.
 */ 
 
-document.querySelector(".btn-ref p").innerHTML = "Click the Light Bulb.";
+document.querySelector(".btn-ref").innerHTML = "Click the Light Bulb.";
 
 readMsg(blackText);
 
@@ -78,7 +80,7 @@ button.addEventListener("click",function(){
 
         light.play();
         transition(blackbox);
-        document.querySelector(".btn-ref p").innerHTML = "Click the Door";
+        document.querySelector(".btn-ref").innerHTML = "Click the Door";
         setTimeout(function() {
             button.classList.add("door-out");
             button.classList.remove("switch");
@@ -115,7 +117,7 @@ button.addEventListener("click",function(){
         
         door.play();
         transition(hallway);
-        document.querySelector(".btn-ref p").innerHTML = "Click the Gift";
+        document.querySelector(".btn-ref").innerHTML = "Click the Gift";
         setTimeout(function() {
             button.classList.add("gift");
             button.classList.remove("door-in");

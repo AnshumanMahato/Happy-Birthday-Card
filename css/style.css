@@ -214,7 +214,8 @@ body {
 
 .scroll p {
   position: absolute;
-  top: -10%;
+  top: 50%;
+  transform: translateY(0%);
 }
 
 /*# sourceMappingURL=style.css.map */
