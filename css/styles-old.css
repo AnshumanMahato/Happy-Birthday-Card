@@ -8,7 +8,8 @@ p {
 .blackbox,
 .whitebox,
 .giftbox,
-.empty-room {
+.empty-room,
+.hallway {
     text-align: center;
     position: absolute;
     height: 100vh;
@@ -29,12 +30,10 @@ p {
     ;
 }
 
-.switch,
-.gift,
-.door-in,
-.door-out {
+.btn {
     position: absolute;
     display: none;
+    overflow: hidden;
     height: 20vw;
     width: 20vw;
     top: 60%;
