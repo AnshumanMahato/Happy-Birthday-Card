@@ -1,11 +1,11 @@
 //jshint esversion:6
 
 let button = document.querySelector(".btn"),
-    blackbox = document.querySelector(".blackbox"),
-    giftbox = document.querySelector(".giftbox"),
+    darkroom = document.querySelector(".darkroom"),
+    giftroom = document.querySelector(".giftroom"),
     hallway = document.querySelector(".hallway"),
     room = document.querySelector(".empty-room"),
-    whitebox = document.querySelector(".whitebox");
+    flash = document.querySelector(".flash");
 
 // These are the text elements that hold messages to be displayed in the respective screes
 
@@ -79,12 +79,12 @@ button.addEventListener("click",function(){
         */
 
         light.play();
-        transition(blackbox);
+        transition(darkroom);
         document.querySelector(".btn-ref").innerHTML = "Click the Door";
         setTimeout(function() {
             button.classList.add("door-out");
             button.classList.remove("switch");
-            blackbox.style.display = "none";
+            darkroom.style.display = "none";
             readMsg(roomText); 
         },4000);
     }
@@ -136,8 +136,8 @@ button.addEventListener("click",function(){
        
         haunt.pause();
         blast.play();
-        giftbox.style.display = "none";
-        transition(whitebox);
+        giftroom.style.display = "none";
+        transition(flash);
        
         music.loop = true;
         music.play();
@@ -152,7 +152,7 @@ button.addEventListener("click",function(){
 
         setTimeout(() => {
             msg.style.transform = "translateY(-100%)";
-            whitebox.style.display = "none";
+            flash.style.display = "none";
         },5000);
 
         setTimeout(() => {

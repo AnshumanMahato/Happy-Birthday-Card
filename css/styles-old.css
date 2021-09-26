@@ -5,9 +5,9 @@ p {
 }
 
 
-.blackbox,
-.whitebox,
-.giftbox,
+.darkroom,
+.flash,
+.giftroom,
 .empty-room,
 .hallway {
     text-align: center;
@@ -16,59 +16,18 @@ p {
     width: 100vw;
 } 
 
-.blackbox {
+.darkroom {
     background-color: #000;
 }
 
-.whitebox {
+.flash {
     background-color: #fff;
 }
 
-.giftbox,
+.giftroom,
 .empty-room {
     background-color: #141852
     ;
-}
-
-.btn {
-    position: absolute;
-    display: none;
-    overflow: hidden;
-    height: 20vw;
-    width: 20vw;
-    top: 60%;
-    left: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    animation: heart-beat 2s linear 0s infinite alternate;
-}
-
-.switch {
-    background-image: url("../resources/img/SVG/Asset\ 10.svg");   
-}
-
-.gift {
-    background-image: url("../resources/img/SVG/Asset\ 9.svg");
-}
-
-.door-in,
-.door-out {
-    background-image: url("../resources/img/SVG/Asset\ 12.svg");
-}
-
-.btn-ref {
-    position: absolute;
-    top:90%;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    color:#fff;
-    display: none;
-}
-
-.btn-ref{
-    font-size: 1.8rem;
 }
 
 .bb-text,
