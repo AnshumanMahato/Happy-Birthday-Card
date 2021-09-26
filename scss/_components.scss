@@ -49,7 +49,7 @@
 }
 
 .bd-pic {
-    @include center;
+    @include position;
 
     height: 83.33333333%;
     width: 83.33333333%;
@@ -59,21 +59,21 @@
 }
 
 .cap {
-    @include center(-15%,50%,0,0);
+    @include position(-15%,50%,0,0);
 
     height: 33.33333333%;
-    top: -15%;
 }
 
 .confetti {
-    @include center;
+    @include position;
 
     height: 150%;
     width: 150%;
 }
 
 .cake {
-    @include center(90%);
+    @include position(90%);
+
     height: 70%;
     width: 70%;
 }
@@ -99,21 +99,19 @@
 }
 
 .scroll p {
-    position: absolute;
-    top: 50%;
-    transform: translateY(0%);
+    @include position(50%,0,0,0);
 }
 
 // BUTTONS
 
 .btn {
-    position: absolute;
+    @include position(60%,50%,0,-50%);
+
     display: none;
     overflow: hidden;
     height: 20vw;
     width: 20vw;
-    top: 60%;
-    left: 50%;
+    
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -121,27 +119,56 @@
 }
 
 .btn-ref {
-    position: absolute;
-    top:90%;
-    left: 50%;
+    @include position(90%,50%,-50%,0);
+
     text-align: center;
-    transform: translateX(-50%);
+    
     color:#fff;
     display: none;
     font-size: 1.8rem;
 }
 
 .switch {
-    background-image: url("../resources/img/SVG/Asset\ 10.svg");   
+    background-image: url("../resources/img/bulb.svg");   
 }
 
 .gift {
-    background-image: url("../resources/img/SVG/Asset\ 9.svg");
+    background-image: url("../resources/img/gift.svg");
 }
 
 .door-in,
 .door-out {
-    background-image: url("../resources/img/SVG/Asset\ 12.svg");
+    background-image: url("../resources/img/door.svg");
+}
+
+//ROOMS
+
+.darkroom,
+.flash,
+.giftroom,
+.empty-room,
+.hallway {
+    text-align: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+} 
+
+.darkroom {
+    background-color: #000;
+}
+
+.flash {
+    background-color: #fff;
+}
+
+.giftroom,
+.empty-room {
+    background-color: #141852;
+}
+
+.hallway{
+    overflow: hidden;
 }
 
 

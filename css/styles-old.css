@@ -4,32 +4,6 @@ p {
     font-size: 2.4rem;
 }
 
-
-.darkroom,
-.flash,
-.giftroom,
-.empty-room,
-.hallway {
-    text-align: center;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-} 
-
-.darkroom {
-    background-color: #000;
-}
-
-.flash {
-    background-color: #fff;
-}
-
-.giftroom,
-.empty-room {
-    background-color: #141852
-    ;
-}
-
 .bb-text,
 .gift-text,
 .hall-text,
@@ -43,10 +17,6 @@ p {
     transform: translateX(-50%);
     opacity:0;
     font-size: 3.2rem;
-}
-
-.hallway{
-    overflow: hidden;
 }
 
 .hall{
