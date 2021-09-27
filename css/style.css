@@ -139,6 +139,7 @@ body {
   top: 50%;
   left: 0;
   transform: translate(0, 0);
+  font-size: 2.4rem;
 }
 
 .btn {
@@ -148,8 +149,8 @@ body {
   transform: translate(0, -50%);
   display: none;
   overflow: hidden;
-  height: 20vw;
-  width: 20vw;
+  height: 20rem;
+  width: 20rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -205,9 +206,107 @@ body {
 }
 
 .hallway {
+  background-image: radial-gradient(transparent, #000), url(../resources/img/Hallway.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
+.bb-text,
+.gift-text,
+.hall-text,
+.room-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  width: 80vw;
+  opacity: 0;
+  font-size: 3.2rem;
+}
+
+.velas {
+  background: #ffffff;
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 1.5%;
+  height: 12%;
+  backface-visibility: hidden;
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5%;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* Fire */
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -50%;
+  left: 60%;
+  margin-left: -2.6px;
+  width: 100%;
+  height: 40%;
+}
+
+.fuego:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* Animation Fire */
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 250% 62.5% rgba(248, 233, 209, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 250% 125% rgba(248, 233, 209, 0.2);
+    transform: scale(0);
+  }
+}
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
 @keyframes fade {
   0% {
     opacity: 1;
