@@ -9,6 +9,10 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @media (min-width:1200px) {
+        font-size: 75%;
+    }
 }
 
 body{

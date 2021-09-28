@@ -5,12 +5,12 @@
     width: 130%;
     
     &--left {
-        grid-column: 1/2;
+        grid-column: balloon-l-start / balloon-l-end;
         animation: balloon-move 4s linear 0s infinite
     }
 
     &--right {
-        grid-column: 4/5;
+        grid-column: balloon-r-start / balloon-r-end;
         margin-left: -20%;
         animation: balloon-move 4s linear 0s infinite reverse;
     }
@@ -21,19 +21,19 @@
     z-index: 0;
 
     &--c-left {
-        grid-column: 2/3;
+        grid-column: flag-cl-start / flag-cl-end;
     }
 
     &--c-right {
-        grid-column: 3/4;
+        grid-column: flag-cr-start / flag-cr-end;
     }
 
     &--left{
-        grid-column: 1/2;
+        grid-column: flag-l-start / flag-l-end;
     }
 
     &--right{
-        grid-column: 4/5;
+        grid-column: flag-r-start / flag-r-end;
     }
 }
 
@@ -94,12 +94,20 @@
     position: relative;
     overflow-y: hidden;
     height: 70%;
-    width:70%
+    width:70%;
+
+    @media (max-width:1000px) {
+      width: 80%;
+    }
 }
 
 .scroll p {
     @include position(50%,0,0,0);
     font-size: 2.4rem;
+
+    @media (max-width:1000px) {
+      font-size: 2rem;
+    }
 }
 
 // BUTTONS
