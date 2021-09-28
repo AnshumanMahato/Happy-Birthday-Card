@@ -13,6 +13,11 @@
     & > * {
         width: 100%;
     }
+
+    @media only screen and (max-width:800px){
+        grid-template-columns: [flag-l-start balloon-l-start frame-start] 1fr 
+                            [balloon-l-end flag-l-end flag-r-start balloon-r-start ] 1fr [flag-r-end balloon-r-end frame-end];
+    }
 }
 
 .frame{
@@ -22,7 +27,7 @@
     display: flex;
     opacity: 1;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
 

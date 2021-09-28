@@ -9,6 +9,11 @@
 .content > * {
   width: 100%;
 }
+@media only screen and (max-width: 800px) {
+  .content {
+    grid-template-columns: [flag-l-start balloon-l-start frame-start] 1fr [balloon-l-end flag-l-end flag-r-start balloon-r-start] 1fr [flag-r-end balloon-r-end frame-end];
+  }
+}
 
 .frame {
   grid-row: 2/3;
@@ -16,7 +21,7 @@
   display: flex;
   opacity: 1;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -35,7 +40,7 @@ html {
 }
 @media (min-width: 1200px) {
   html {
-    font-size: 75%;
+    font-size: 70%;
   }
 }
 
@@ -53,10 +58,25 @@ body {
   grid-column: balloon-l-start/balloon-l-end;
   animation: balloon-move 4s linear 0s infinite;
 }
+@media (max-width: 800px) {
+  .balloon--left {
+    margin-right: 10%;
+  }
+}
 .balloon--right {
   grid-column: balloon-r-start/balloon-r-end;
   margin-left: -20%;
   animation: balloon-move 4s linear 0s infinite reverse;
+}
+@media (max-width: 800px) {
+  .balloon--right {
+    margin-left: 10%;
+  }
+}
+@media (max-width: 800px) {
+  .balloon {
+    width: 90%;
+  }
 }
 
 .flag {
@@ -66,8 +86,18 @@ body {
 .flag--c-left {
   grid-column: flag-cl-start/flag-cl-end;
 }
+@media (max-width: 800px) {
+  .flag--c-left {
+    display: none;
+  }
+}
 .flag--c-right {
   grid-column: flag-cr-start/flag-cr-end;
+}
+@media (max-width: 800px) {
+  .flag--c-right {
+    display: none;
+  }
 }
 .flag--left {
   grid-column: flag-l-start/flag-l-end;
@@ -82,6 +112,12 @@ body {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
+}
+@media (max-width: 800px) {
+  .img-back {
+    height: 40rem;
+    width: 40rem;
+  }
 }
 
 .bd-pic {
@@ -122,6 +158,10 @@ body {
   width: 70%;
 }
 
+.HBD-text {
+  margin-top: 10%;
+}
+
 .HBD {
   font-size: 2.4rem;
   padding: 0;
@@ -138,9 +178,10 @@ body {
   height: 70%;
   width: 70%;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .scroll {
-    width: 80%;
+    width: 60%;
+    height: 60%;
   }
 }
 
@@ -150,11 +191,6 @@ body {
   left: 0;
   transform: translate(0, 0);
   font-size: 2.4rem;
-}
-@media (max-width: 1000px) {
-  .scroll p {
-    font-size: 2rem;
-  }
 }
 
 .btn {
