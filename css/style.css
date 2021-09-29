@@ -18,8 +18,8 @@
 .frame {
   grid-row: 2/3;
   grid-column: frame-start/frame-end;
-  display: flex;
-  opacity: 1;
+  display: none;
+  opacity: 0;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -63,6 +63,11 @@ body {
     margin-left: -25%;
   }
 }
+@media (max-width: 500px) {
+  .balloon--left {
+    margin-left: -40%;
+  }
+}
 .balloon--right {
   grid-column: balloon-r-start/balloon-r-end;
   margin-left: -20%;
@@ -78,6 +83,12 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 500px) {
+  .balloon {
+    width: 120%;
+  }
+}
+
 .flag {
   grid-row: 1/2;
   z-index: 0;
@@ -169,6 +180,10 @@ body {
   width: 70%;
 }
 
+.HBD-text {
+  width: 90%;
+}
+
 .HBD {
   font-size: 2.4rem;
   padding: 0;
@@ -203,12 +218,18 @@ body {
   position: relative;
   overflow-y: hidden;
   height: 70%;
-  width: 70%;
+  width: 80%;
+  font-size: 2.4rem;
 }
 @media (max-width: 800px) {
   .scroll {
-    width: 60%;
     height: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .scroll {
+    height: 80%;
+    font-size: 2.2rem;
   }
 }
 
@@ -217,7 +238,6 @@ body {
   top: 50%;
   left: 0;
   transform: translate(0, 0);
-  font-size: 2.4rem;
 }
 
 .btn {
@@ -227,8 +247,8 @@ body {
   transform: translate(0, -50%);
   display: none;
   overflow: hidden;
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
+  width: 15rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

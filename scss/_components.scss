@@ -10,6 +10,11 @@
         @media (max-width: 800px){
           margin-left: -25%;
         }
+
+        @media (max-width: 500px){
+          margin-left: -40%;
+        }
+        
     }
 
     &--right {
@@ -25,8 +30,8 @@
       width: 100%;
     }
 
-    @media (max-width:600px) {
-
+    @media (max-width:500px) {
+      width: 120%;
     }
 }
 
@@ -108,6 +113,10 @@
     width: 70%;
 }
 
+.HBD-text {
+  width: 90%;
+}
+
 
 .HBD {
     font-size: 2.4rem;
@@ -133,17 +142,22 @@
     position: relative;
     overflow-y: hidden;
     height: 70%;
-    width:70%;
+    width: 80%;
+    font-size: 2.4rem;
 
     @media (max-width:800px) {
-      width: 60%;
+      // width: 60%;
       height: 60%;
+    }
+
+    @media (max-width:500px) {
+      height: 80%;
+      font-size: 2.2rem;
     }
 }
 
 .scroll p {
     @include position(50%,0,0,0);
-    font-size: 2.4rem;
 }
 
 // BUTTONS
@@ -153,8 +167,8 @@
 
     display: none;
     overflow: hidden;
-    height: 20rem;
-    width: 20rem;
+    height: 15rem;
+    width: 15rem;
     
     background-repeat: no-repeat;
     background-size: contain;
