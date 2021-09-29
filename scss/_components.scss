@@ -8,7 +8,7 @@
         grid-column: balloon-l-start / balloon-l-end;
         animation: balloon-move 4s linear 0s infinite;
         @media (max-width: 800px){
-          margin-right: 10%;
+          margin-left: -25%;
         }
     }
 
@@ -17,12 +17,16 @@
         margin-left: -20%;
         animation: balloon-move 4s linear 0s infinite reverse;
         @media (max-width: 800px){
-          margin-left: 10%;
+          margin-left: 25%;
         }
     }
 
     @media (max-width: 800px){
-      width: 90%;
+      width: 100%;
+    }
+
+    @media (max-width:600px) {
+
     }
 }
 
@@ -47,6 +51,11 @@
     &--right{
         grid-column: flag-r-start / flag-r-end;
     }
+
+    @media (max-width:800px) {
+      transform: scale(1.2);
+      margin-top: 20%;
+    }
 }
 
 // BIRTHDAY CARD
@@ -59,8 +68,13 @@
     border-radius: 50%;
 
     @media (max-width:800px){
-      height:40rem;
-      width: 40rem;
+      height:35rem;
+      width: 35rem;
+    }
+
+    @media (max-width:500px){
+      height:20rem;
+      width: 20rem;
     }
 }
 
@@ -94,17 +108,23 @@
     width: 70%;
 }
 
-.HBD-text {margin-top: 10%;}
-
 
 .HBD {
     font-size: 2.4rem;
     padding: 0;
+
+    @media (max-width:800px) {font-size: 3.4rem;}
+
+    @media (max-width:500px) {font-size: 3rem;}
+
 }
 
 .name {
     font-size: 3.2rem;
     padding: 0;
+
+    @media (max-width:800px){font-size: 4.2rem;}
+    @media (max-width:500px){font-size: 3.8rem;}
 }
 
 // SCROLL
