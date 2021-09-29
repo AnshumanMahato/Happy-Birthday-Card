@@ -235,6 +235,15 @@
     overflow: hidden;
 }
 
+.empty-room,
+.giftroom,
+.content {
+  background-image: radial-gradient(transparent,rgba(0, 0, 0, 0.65)), url(../resources/img/bedroom.svg);
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // TEXT CONTAINERS
 
 .bb-text,
