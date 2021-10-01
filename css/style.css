@@ -198,17 +198,17 @@ body {
   }
 }
 
-.name {
+.nickname {
   font-size: 3.2rem;
   padding: 0;
 }
 @media (max-width: 800px) {
-  .name {
+  .nickname {
     font-size: 4.2rem;
   }
 }
 @media (max-width: 500px) {
-  .name {
+  .nickname {
     font-size: 3.8rem;
   }
 }

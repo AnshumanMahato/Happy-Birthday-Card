@@ -1,5 +1,22 @@
 //jshint esversion:6
 
+/******************************************************* SETUP ************************************************************/
+
+const config = {
+    name: "", // actual name of the recipient
+    nickname: "", // nickname(optional)
+    pic: "" //image url of recipients
+};
+
+if(config.name)
+    document.querySelector('.name').textContent = config.name;
+if(config.nickname)
+    document.querySelector('.nickname').textContent = config.nickname;
+if(config.pic)
+    document.querySelector('.bd-pic').src = config.pic;
+
+/*************************************************** ANIMATION CODE *******************************************************/
+
 let button = document.querySelector(".btn"),
     darkroom = document.querySelector(".darkroom"),
     giftroom = document.querySelector(".giftroom"),
