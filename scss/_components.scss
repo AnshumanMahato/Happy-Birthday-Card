@@ -88,9 +88,16 @@
 
     height: 83.33333333%;
     width: 83.33333333%;
+    overflow: hidden;
+
     border-color: #fff;
     border-style: dotted;
     border-radius: 50%;
+
+    background-image: url(../resources/img/Asset\ 1-100.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cap {

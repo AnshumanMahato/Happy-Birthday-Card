@@ -5,7 +5,7 @@
 const config = {
     name: "", // actual name of the recipient
     nickname: "", // nickname(optional)
-    pic: "" //image url of recipients
+    pic: "https://scontent.fixr3-1.fna.fbcdn.net/v/t1.6435-9/187640039_302817597976153_1586608434934831406_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=EhnUkEO1QbIAX_xKqsG&_nc_ht=scontent.fixr3-1.fna&oh=00e74d1c19e322a0c02c4a131fe7cf0d&oe=617B0EB7" //image url of recipients
 };
 
 if(config.name)
@@ -13,7 +13,7 @@ if(config.name)
 if(config.nickname)
     document.querySelector('.nickname').textContent = config.nickname;
 if(config.pic)
-    document.querySelector('.bd-pic').src = config.pic;
+    document.querySelector('.bd-pic').style.backgroundImage = `url(${config.pic})`;
 
 /*************************************************** ANIMATION CODE *******************************************************/
 
