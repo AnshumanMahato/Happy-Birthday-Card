@@ -1,6 +1,6 @@
 # Happy Birthday Card
 
-
+A Web based birthday card to wish your friends and family in a unique way.
 
 </br>
 
