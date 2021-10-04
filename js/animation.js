@@ -3,10 +3,17 @@
 /******************************************************* SETUP ************************************************************/
 
 const config = {
-    name: "", // actual name of the recipient
+    name: "", // actual name of the recipient (Mandatory)
+
     nickname: "", // nickname(optional)
-    pic: "", //image url of recipients
+
+    pic: "", //image url of recipients (Mandatory)
+
+    HBDtext: "May your soul rest in peace", //How would you like to say happy bithday. If left empty, general Happy Birthday will appear
+    
     showMsg: true, // set to false if you do not want the scrolling message
+    
+    // text for the scrolling message(optional)
     message: `We do not get to choose our families, but we do get to choose our friends. You have 
     been closer than family to me. On this day of your birth, I wish you every happiness 
     and blessing. Congratulations! You grew up one more year. Soon, you'll be 25, then 30, 
@@ -34,7 +41,7 @@ if(config.name) {
 if(config.pic)
     document.querySelector('.bd-pic').style.backgroundImage = `url(${config.pic})`;
 
-if(config.showMsg)
+if(config.showMsg && config.message.length )
     document.querySelector('').
 
 /*************************************************** ANIMATION CODE *******************************************************/
