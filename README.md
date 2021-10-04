@@ -1,6 +1,7 @@
-# HBD-Template v0.2
+# Happy Birthday Card
 
-This is a template for a birthday card. In this version an additional haunted hallway scene has been added. **Only mobile portrait view is available.**
+
+
 </br>
 
 [Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/)
