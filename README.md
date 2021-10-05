@@ -1,10 +1,10 @@
 # Happy Birthday Card
 
 A Web based birthday card to wish your friends and family in a unique way.
-
 </br>
-
 [Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/)
+
+## How to setup
 
 ## Atributions
 
