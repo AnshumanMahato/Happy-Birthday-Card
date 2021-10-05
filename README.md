@@ -5,6 +5,17 @@ A Web based birthday card to wish your friends and family in a unique way.
 [Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/)
 
 ## How to setup
+Setup is very simple. Just edit the configuration object in [animation.js](./js/animation.js). This is what the configuration object looks like. 
+
+```js
+const config = {
+    name: "Aditi", // actual name of the recipient (Mandatory)
+    nickname: "Hildul", // nickname(optional)
+    pic: "", //image url of recipients (Mandatory)
+    showScrollMsg: true, // set to false if you do not want the scrolling message
+};
+
+```
 
 ## Atributions
 
