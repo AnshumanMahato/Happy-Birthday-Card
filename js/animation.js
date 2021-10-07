@@ -3,9 +3,9 @@
 /******************************************************* SETUP ************************************************************/
 
 const config = {
-    name: "Aditi", // actual name of the recipient (Mandatory)
+    name: "Friend", // actual name of the recipient (Mandatory)
 
-    nickname: "Hildul", // nickname(optional)
+    nickname: "Buddy", // nickname(optional)
 
     pic: "", //image url of recipients (Mandatory)
 
