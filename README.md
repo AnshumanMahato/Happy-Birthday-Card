@@ -1,10 +1,14 @@
 # Happy Birthday Card
 
 A Web based birthday card to wish your friends and family in a unique way.
-</br>
-[Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/)
 
-## How to setup
+Check out the [Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/).
+
+If you liked it, please consider giving it star 🤩⭐. Feel free to fork too 🤗.
+
+---
+
+## <ins>How to setup</ins>
 
 Setup is very simple. Just edit the configuration object in [animation.js](./js/animation.js). This is what the configuration object looks like.
 
@@ -24,13 +28,15 @@ The `name` and `nickname` are self explainatory and `nickname` is optional. If n
 
 `pic` will take the url of the image of the recipient. This will appear on the birthday card. 
 
-### Setting up the pic
+### <ins>Setting up the pic</ins>
 
 You can upload your image to telegra.ph, publish it and then get the image url (image address). It would be good if the image is of 1:1 aspect ratio and not more than 400px in height and width as larger images can affect load times.
 
 Alternatively, you can also manually replace [Asset.png](./resources/img/Asset.png) with your image, make necessary changes at line 97 in [here](./scss/_components.scss) and then rebuild.
 
-## Atributions
+---
+
+## <ins>Atributions</ins>
 
 - <a href='https://www.freepik.com/vectors/pattern'>Pattern vector created by mokoland - www.freepik.com</a>
 
