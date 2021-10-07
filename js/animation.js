@@ -9,7 +9,7 @@ const config = {
 
     pic: "", //image url of recipients (Mandatory)
 
-    showScrollMsg: true, // set to false if you do not want the scrolling message
+    showScrollMsg: false, // set to false if you do not want the scrolling message
 };
 
 if(config.name) {
@@ -169,10 +169,14 @@ button.addEventListener("click",function(){
 
         if(!config.showScrollMsg){
             frames[0].style.display = "flex";
-            frames[0].classList.add("appear");
-            frames[0].style.opacity = "1";
+            setTimeout(() => {
+                frames[0].classList.add("appear");
+                frames[0].style.opacity = "1";
+            }, 1500);
             return;
         }
+
+        document.querySelector(".HBD").textContent = "May your soul rest in peace";
 
         frames[1].style.display = "flex";
 
