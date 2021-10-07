@@ -9,7 +9,7 @@ const config = {
 
     pic: "", //image url of recipients (Mandatory)
 
-    showScrollMsg: false, // set to false if you do not want the scrolling message
+    showScrollMsg: true, // set to false if you do not want the scrolling message
 };
 
 if(config.name) {
