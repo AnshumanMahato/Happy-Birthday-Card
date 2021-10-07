@@ -2,7 +2,7 @@
 
 A Web based birthday card to wish your friends and family in a unique way.
 
-Check out the [Preview](https://anshumanmahato.github.io/Happy-Birthday-Card/).
+Check out the [Preview](https://happy-birthday-card.vercel.app/).
 
 If you liked it, please consider giving it star 🤩⭐. Feel free to fork too 🤗.
 
