@@ -22,7 +22,9 @@ export default {
 
   showScrollMsg: true, // set to false if you do not want the scrolling message
 
-  openDate: false, // the page only can be opened at this time, the format is x-x-xxxx (1-5-2022)
+  openDate: false, // the page only can be opened at this time
+
+  timeZone: "Asia/Jakarta", // your timezone, if you use openDate extension
 };
 ```
 
@@ -33,8 +35,7 @@ The `name` and `nickname` are self explainatory and `nickname` is optional. If n
 `pic` will take the url of the image of the recipient. This will appear on the birthday card.
 
 `openDate` is used to prevent user open the page too late or too early. Fill this field using this format  
-x-x-xxxx (1-1-2021), don't use 0 as prefix (01).
-This feature use UTC date.
+mm-dd-yyyy (12-05-2021) or false if you desire to disable it.
 
 ### <ins>Setting up the pic</ins>
 
