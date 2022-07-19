@@ -6,11 +6,15 @@ import config from "./config.js";
 
 if (config.name) {
   document.querySelector(".name").textContent = config.name;
-  if (config.nickname) document.querySelector(".nickname").textContent = config.nickname;
+  if (config.nickname)
+    document.querySelector(".nickname").textContent = config.nickname;
   else document.querySelector(".nickname").textContent = config.name;
 }
 
-if (config.pic) document.querySelector(".bd-pic").style.backgroundImage = `url(${config.pic})`;
+if (config.pic)
+  document.querySelector(
+    ".bd-pic"
+  ).style.backgroundImage = `url(${config.pic})`;
 
 /*************************************************** ANIMATION CODE *******************************************************/
 
@@ -63,7 +67,7 @@ const readMsg = (text) => {
 
 // transition() is animation for change from one scene to another. It takes the current scene div element as input.
 
-export const transition = (currentScene) => {
+const transition = (currentScene) => {
   currentScene.classList.add("fade-in");
   currentScene.style.opacity = "0";
   button.style.display = "none";
