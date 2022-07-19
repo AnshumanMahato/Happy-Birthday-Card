@@ -3,6 +3,7 @@
 /******************************************************* SETUP ************************************************************/
 
 import config from "./config.js";
+import { isBDay } from "./ext/openDate.js";
 
 if (config.name) {
   document.querySelector(".name").textContent = config.name;
@@ -15,6 +16,13 @@ if (config.pic)
   document.querySelector(
     ".bd-pic"
   ).style.backgroundImage = `url(${config.pic})`;
+
+if (config.birthDate) {
+  const status = isBDay();
+
+  if (status === "IS_EARLY") location.href = "../pages/soon.html";
+  if (status === "IS_LATE") location.href = "../pages/late.html";
+}
 
 /*************************************************** ANIMATION CODE *******************************************************/
 

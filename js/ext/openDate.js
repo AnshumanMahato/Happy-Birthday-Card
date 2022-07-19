@@ -1,22 +1,13 @@
 import config from "../config.js";
 
-// Get local time
-const localDate = new Date()
-  .toLocaleString("en-us", {
-    timeZone: config.timeZone,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  })
-  .replaceAll("/", "");
-
 // Script start here
-if (config.openDate != false) {
-  const openDate = Number(config.openDate.replaceAll("-", ""));
 
-  if (localDate > openDate) {
-    location.href = "../../pages/late.html";
-  } else if (localDate < openDate) {
-    location.href = "../../pages/soon.html";
-  }
-}
+export const isBDay = function () {
+  const startTime = new Date(config.birthDate + "T00:00").getTime();
+  const endTime = startTime + 24 * 60 * 60 * 1000;
+  const localTime = Date.now();
+  alert(`${startTime} ${localTime} ${endTime}`);
+  if (localTime < startTime) return "IS_EARLY";
+  if (localTime > endTime) return "IS_LATE";
+  return "ON_TIME";
+};

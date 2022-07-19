@@ -7,7 +7,5 @@ export default {
 
   showScrollMsg: true, // set to false if you do not want the scrolling message
 
-  openDate: false, // the page only can be opened at this time, read README.md
-
-  timeZone: "Asia/Jakarta", // timezone to use openDate feature
+  birthDate: "2022-07-19", // Mention birthday date in YYYY-MM-DD format
 };
