@@ -10,23 +10,32 @@ If you liked it, please consider giving it star 🤩⭐. Feel free to fork too �
 
 ## <ins>How to setup</ins>
 
-Setup is very simple. Just edit the configuration object in [animation.js](./js/animation.js). This is what the configuration object looks like.
+Setup is very simple. Just edit the configuration object in [config.js](./js/config.js). This is what the configuration object looks like.
 
 ```js
-const config = {
-    name: "", // actual name of the recipient (Mandatory)
-    nickname: "", // nickname(optional)
-    pic: "", //image url of recipients (Mandatory)
-    showScrollMsg: true, // set to false if you do not want the scrolling message
-};
+export default {
+  name: "Friend", // actual name of the recipient (Mandatory)
 
+  nickname: "Buddy", // nickname(optional)
+
+  pic: "", // image url of recipients (Mandatory)
+
+  showScrollMsg: true, // set to false if you do not want the scrolling message
+
+  openDate: false, // the page only can be opened at this time
+
+  timeZone: "Asia/Jakarta", // your timezone, if you use openDate extension
+};
 ```
 
 The `name` and `nickname` are self explainatory and `nickname` is optional. If no nickname is provided, then value of name will be used in its place.
 
 `showScrollMsg` takes `true` or `false`. If set to `false`, the scroll message will be skipped and card will apper directly.
 
-`pic` will take the url of the image of the recipient. This will appear on the birthday card. 
+`pic` will take the url of the image of the recipient. This will appear on the birthday card.
+
+`openDate` is used to prevent user open the page too late or too early. Fill this field using this format  
+mm-dd-yyyy (12-05-2021) or false if you desire to disable it.
 
 ### <ins>Setting up the pic</ins>
 
