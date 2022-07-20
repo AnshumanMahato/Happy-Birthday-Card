@@ -1,11 +1,11 @@
 export default {
-  name: "Friend", // actual name of the recipient (Mandatory)
+  name: process.env.NAME, // actual name of the recipient (Mandatory)
 
-  nickname: "Buddy", // nickname(optional)
+  nickname: process.env.NICKNAME, // nickname(optional)
 
-  pic: "", // image url of recipients (Mandatory)
+  pic: process.env.PIC, // image url of recipients (Mandatory)
 
-  showScrollMsg: true, // set to false if you do not want the scrolling message
+  showScrollMsg: process.env.SHOW_SCROLL_MSG, // set to false if you do not want the scrolling message
 
-  birthDate: "2022-07-19", // Mention birthday date in YYYY-MM-DD format
+  birthDate: process.env.BIRTH_DATE, // Mention birthday date in YYYY-MM-DD format
 };

@@ -1,7 +1,6 @@
 //jshint esversion:6
 
 /******************************************************* SETUP ************************************************************/
-
 import config from "./config.js";
 import { isBDay } from "./ext/openDate.js";
 
