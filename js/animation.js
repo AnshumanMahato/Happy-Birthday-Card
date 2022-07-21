@@ -3,6 +3,8 @@
 /******************************************************* SETUP ************************************************************/
 import config from "./config.js";
 import { isBDay } from "./ext/openDate.js";
+import setPage from "./ext/setPage.js";
+import { late, soon } from "./set404.js";
 
 if (config.name) {
   document.querySelector(".name").textContent = config.name;
@@ -19,8 +21,8 @@ if (config.pic)
 if (config.birthDate) {
   const status = isBDay();
 
-  if (status === "IS_EARLY") location.href = "../pages/soon.html";
-  if (status === "IS_LATE") location.href = "../pages/late.html";
+  if (status === "IS_EARLY") setPage(soon);
+  if (status === "IS_LATE") setPage(late);
 }
 
 /*************************************************** ANIMATION CODE *******************************************************/
