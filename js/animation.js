@@ -1,31 +1,6 @@
 //jshint esversion:6
 
-/******************************************************* SETUP ************************************************************/
-import config from "./config.js";
-import { isBDay } from "./ext/openDate.js";
-import setPage from "./ext/setPage.js";
-import { late, soon } from "./set404.js";
-
-if (config.name) {
-  document.querySelector(".name").textContent = config.name;
-  if (config.nickname)
-    document.querySelector(".nickname").textContent = config.nickname;
-  else document.querySelector(".nickname").textContent = config.name;
-}
-
-if (config.pic)
-  document.querySelector(
-    ".bd-pic"
-  ).style.backgroundImage = `url(${config.pic})`;
-
-if (config.birthDate) {
-  const status = isBDay();
-
-  if (status === "IS_EARLY") setPage(soon);
-  if (status === "IS_LATE") setPage(late);
-}
-
-/*************************************************** ANIMATION CODE *******************************************************/
+import { showScrollMsg } from "./config";
 
 const button = document.querySelector(".btn"),
   darkroom = document.querySelector(".darkroom"),
@@ -63,7 +38,6 @@ const readMsg = (text) => {
     // this loop goes through all the text msg paras
     setTimeout(() => {
       // A timeout of 5s ia applied to all text elements so that appear successively one after the other
-
       text[i].classList.add("read"); // this adds a fadeIn-fadeOut animation to elements
       if (i === text.length - 1) {
         // this ensures that the button appears only after the last text is displayed.
@@ -90,108 +64,111 @@ const transition = (currentScene) => {
     one by one, a button(bulb) appears and the user is asked to click the button to swith on the lights.
 */
 
-CTAtext.innerHTML = "Click the Light Bulb.";
+export const animate = function () {
+  CTAtext.innerHTML = "Click the Light Bulb.";
 
-readMsg(blackText);
+  readMsg(blackText);
 
-button.addEventListener("click", function () {
-  if (button.classList.contains("switch")) {
-    /* 
-            When the switch is pressed, the black div will wipe out and the backgroung scene with no 
-            elements will appear, signifying that the lights are turned on and the room is empty. Then 
-            the msg will be displayed after which, the user will be asked to move out and the button with
-            door icon will appear. 
-        */
+  button.addEventListener("click", function () {
+    if (button.classList.contains("switch")) {
+      /* 
+              When the switch is pressed, the black div will wipe out and the backgroung scene with no 
+              elements will appear, signifying that the lights are turned on and the room is empty. Then 
+              the msg will be displayed after which, the user will be asked to move out and the button with
+              door icon will appear. 
+          */
 
-    light.play();
-    transition(darkroom);
-    CTAtext.innerHTML = "Click the Door";
-    setTimeout(function () {
-      button.classList.add("door-out");
-      button.classList.remove("switch");
-      darkroom.style.display = "none";
-      readMsg(roomText);
-    }, 4000);
-  } else if (button.classList.contains("door-out")) {
-    /* 
-            when the door is pressed, scene changes to cemetry. Again, the msg will be displayed, after 
-            which, the user will be asked to come inside and the button with door will appear again.
-        */
+      light.play();
+      transition(darkroom);
+      CTAtext.innerHTML = "Click the Door";
+      setTimeout(function () {
+        button.classList.add("door-out");
+        button.classList.remove("switch");
+        darkroom.style.display = "none";
+        readMsg(roomText);
+      }, 4000);
+    } else if (button.classList.contains("door-out")) {
+      /* 
+              when the door is pressed, scene changes to cemetry. Again, the msg will be displayed, after 
+              which, the user will be asked to come inside and the button with door will appear again.
+          */
 
-    door.play();
-    transition(room);
-    setTimeout(function () {
-      haunt.play();
-      haunt.loop = true;
-      button.classList.add("door-in");
-      button.classList.remove("door-out");
-      room.style.display = "none";
-      readMsg(hallText);
-    }, 4000);
-  } else if (button.classList.contains("door-in")) {
-    /* 
-            when the door is pressed, scene changes to the gift room. Again, the msg will be displayed, after 
-            which, the user will be asked to open the gift and the button with gift will appear.
-        */
+      door.play();
+      transition(room);
+      setTimeout(function () {
+        haunt.play();
+        haunt.loop = true;
+        button.classList.add("door-in");
+        button.classList.remove("door-out");
+        room.style.display = "none";
+        readMsg(hallText);
+      }, 4000);
+    } else if (button.classList.contains("door-in")) {
+      /* 
+              when the door is pressed, scene changes to the gift room. Again, the msg will be displayed, after 
+              which, the user will be asked to open the gift and the button with gift will appear.
+          */
 
-    door.play();
-    transition(hallway);
-    CTAtext.innerHTML = "Click the Gift";
-    setTimeout(function () {
-      button.classList.add("gift");
-      button.classList.remove("door-in");
-      hallway.style.display = "none";
-      readMsg(giftText);
-    }, 4000);
-  } else if (button.classList.contains("gift")) {
-    /* 
-            when the gift is pressed, the gift scene vanishes and the white div fades slowly giving a sense 
-            of explosion. After that, the message frame appears and moves up until the message completes. Then,
-            the message frame fades away and the card appears.
-        */
+      door.play();
+      transition(hallway);
+      CTAtext.innerHTML = "Click the Gift";
+      setTimeout(function () {
+        button.classList.add("gift");
+        button.classList.remove("door-in");
+        hallway.style.display = "none";
+        readMsg(giftText);
+      }, 4000);
+    } else if (button.classList.contains("gift")) {
+      /* 
+              when the gift is pressed, the gift scene vanishes and the white div fades slowly giving a sense 
+              of explosion. After that, the message frame appears and moves up until the message completes. Then,
+              the message frame fades away and the card appears.
+          */
 
-    haunt.pause();
-    blast.play();
-    giftroom.style.display = "none";
-    transition(flash);
+      haunt.pause();
+      blast.play();
+      giftroom.style.display = "none";
+      transition(flash);
 
-    music.loop = true;
-    music.play();
+      music.loop = true;
+      music.play();
 
-    if (!config.showScrollMsg) {
-      frames[0].style.display = "flex";
+      if (!showScrollMsg) {
+        frames[0].style.display = "flex";
+        setTimeout(() => {
+          frames[0].classList.add("appear");
+          frames[0].style.opacity = "1";
+        }, 1500);
+        return;
+      }
+
+      document.querySelector(".HBD").textContent =
+        "May your soul rest in peace";
+
+      frames[1].style.display = "flex";
+
       setTimeout(() => {
+        frames[1].classList.add("appear");
+        frames[1].style.opacity = "1";
+        msg.classList.add("move-up");
+      }, 1500);
+
+      setTimeout(() => {
+        msg.style.transform = "translateY(-100%)";
+        flash.style.display = "none";
+      }, 5000);
+
+      setTimeout(() => {
+        msgWindow.classList.add("fade-in");
+        msgWindow.style.opacity = "0";
+      }, 88000);
+
+      setTimeout(() => {
+        frames[1].style.display = "none";
+        frames[0].style.display = "flex";
         frames[0].classList.add("appear");
         frames[0].style.opacity = "1";
-      }, 1500);
-      return;
+      }, 91000);
     }
-
-    document.querySelector(".HBD").textContent = "May your soul rest in peace";
-
-    frames[1].style.display = "flex";
-
-    setTimeout(() => {
-      frames[1].classList.add("appear");
-      frames[1].style.opacity = "1";
-      msg.classList.add("move-up");
-    }, 1500);
-
-    setTimeout(() => {
-      msg.style.transform = "translateY(-100%)";
-      flash.style.display = "none";
-    }, 5000);
-
-    setTimeout(() => {
-      msgWindow.classList.add("fade-in");
-      msgWindow.style.opacity = "0";
-    }, 88000);
-
-    setTimeout(() => {
-      frames[1].style.display = "none";
-      frames[0].style.display = "flex";
-      frames[0].classList.add("appear");
-      frames[0].style.opacity = "1";
-    }, 91000);
-  }
-});
+  });
+};
