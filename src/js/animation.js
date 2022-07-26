@@ -1,6 +1,6 @@
 //jshint esversion:6
 
-import { showScrollMsg } from "./config";
+import config from "./config";
 
 const button = document.querySelector(".btn"),
   darkroom = document.querySelector(".darkroom"),
@@ -21,7 +21,7 @@ const blackText = document.querySelectorAll(".bb-text"), // msgs in the dark roo
 
 const frames = document.querySelectorAll(".frame"),
   msgWindow = document.querySelector(".scroll"), // this one has the message frame in [0] and card fram in [1]
-  msg = document.querySelector(".scroll p"); // the Message para
+  msg = document.querySelector(".text"); // the Message para
 
 //Sfx files
 
@@ -133,7 +133,7 @@ export const animate = function () {
       music.loop = true;
       music.play();
 
-      if (!showScrollMsg) {
+      if (!config.showScrollMsg) {
         frames[0].style.display = "flex";
         setTimeout(() => {
           frames[0].classList.add("appear");
