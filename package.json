@@ -9,8 +9,8 @@
   },
   "browserslist": "last 10 versions, not dead",
   "scripts": {
-    "watch": "parcel index.html",
-    "build": "parcel build index.html"
+    "watch": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
