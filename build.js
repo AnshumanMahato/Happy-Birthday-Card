@@ -26,7 +26,7 @@ axios
       .resize(400, 400)
       .toFormat("jpeg")
       .jpeg({ quality: 90 })
-      .toFile(`hello.jpg`);
+      .toFile(`temp/hello.jpg`);
   })
   .then(() => {
     console.log("IMAGE Downloaded successfully!!!");
@@ -41,7 +41,7 @@ axios
       (string, node) => string + generateMarkup(node),
       ""
     );
-    fs.writeFileSync("hello.html", markup, {
+    fs.writeFileSync("temp/hello.html", markup, {
       encoding: "utf-8",
     });
   });
