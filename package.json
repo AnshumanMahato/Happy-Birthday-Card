@@ -9,8 +9,11 @@
   },
   "browserslist": "last 10 versions, not dead",
   "scripts": {
-    "watch": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "watch:parcel": "parcel src/index.html",
+    "build:parcel": "parcel build src/index.html",
+    "gen-index": "node build.js",
+    "watch": "npm-run-all gen-index watch:parcel",
+    "build": "npm-run-all gen-index build:parcel"
   },
   "repository": {
     "type": "git",
@@ -34,6 +37,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^7.0.0",
+    "npm-run-all": "^4.1.5",
     "sharp": "^0.30.7"
   }
 }

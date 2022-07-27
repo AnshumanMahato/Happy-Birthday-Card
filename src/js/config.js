@@ -5,7 +5,7 @@ export default {
 
   pic: process.env.PIC, // image url of recipients (Mandatory)
 
-  showScrollMsg: process.env.SHOW_SCROLL_MSG, // set to false if you do not want the scrolling message
+  showScrollMsg: process.env.SCROLL_MSG, // set to false if you do not want the scrolling message
 
   birthDate: process.env.BIRTH_DATE, // Mention birthday date in YYYY-MM-DD format
 };

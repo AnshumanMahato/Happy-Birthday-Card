@@ -1,7 +1,5 @@
 //jshint esversion:6
 
-import config from "./config";
-
 const button = document.querySelector(".btn"),
   darkroom = document.querySelector(".darkroom"),
   giftroom = document.querySelector(".giftroom"),
@@ -133,7 +131,7 @@ export const animate = function () {
       music.loop = true;
       music.play();
 
-      if (!config.showScrollMsg) {
+      if (!process.env.SCROLL_MSG) {
         frames[0].style.display = "flex";
         setTimeout(() => {
           frames[0].classList.add("appear");
@@ -141,9 +139,6 @@ export const animate = function () {
         }, 1500);
         return;
       }
-
-      document.querySelector(".HBD").textContent =
-        "May your soul rest in peace";
 
       frames[1].style.display = "flex";
 

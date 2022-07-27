@@ -43,11 +43,21 @@ axios
       ""
     );
     const readTime = (markup.split(" ").length / 200) * 60;
-    console.log(`Time: ${Math.round(readTime)}`);
-    const template = fs.readFileSync(path.join(__dirname, "./template.html"), {
+    const readVar = `<style>:root{
+      --readTime: ${Math.round(readTime) + 15}s;
+    }</style>`;
+    let html = fs.readFileSync(path.join(__dirname, "./template.html"), {
       encoding: "utf-8",
     });
-    const html = template.replace("{{^SCROLL_MSG}}", markup);
+    html = html
+      .replace("{{^READ_TIME}}", readVar)
+      .replace("{{^SCROLL_MSG}}", markup)
+      .replace("{{^HBD_MSG}}", process.env.HBD_MSG)
+      .replace("{{^NAME}}", process.env.NAME)
+      .replace(
+        "{{^NICKNAME}}",
+        process.env.NICKNAME ? process.env.NICKNAME : process.env.NAME
+      );
     fs.writeFileSync("src/index.html", html, {
       encoding: "utf-8",
     });
