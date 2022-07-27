@@ -1,5 +1,6 @@
 const axios = require("axios").default;
 const fs = require("fs");
+const path = require("path");
 const sharp = require("sharp");
 require("dotenv").config();
 
@@ -7,7 +8,7 @@ const generateMarkup = function (node) {
   const { tag, children } = node;
   if (tag === "br") return "<br/>";
   if (!children) return "";
-  const paraTags = ["h3", "h4", "blockquote", "p"];
+  const paraTags = ["h3", "h4", "blockquote", "aside", "p"];
   let content = "";
   children.forEach((child) => {
     if (typeof child === "object") content += generateMarkup(child);
@@ -26,7 +27,7 @@ axios
       .resize(400, 400)
       .toFormat("jpeg")
       .jpeg({ quality: 90 })
-      .toFile(`temp/hello.jpg`);
+      .toFile(`src/BdayPic.jpeg`);
   })
   .then(() => {
     console.log("IMAGE Downloaded successfully!!!");
@@ -41,7 +42,14 @@ axios
       (string, node) => string + generateMarkup(node),
       ""
     );
-    fs.writeFileSync("temp/hello.html", markup, {
+    const readTime = (markup.split(" ").length / 200) * 60;
+    console.log(`Time: ${Math.round(readTime)}`);
+    const template = fs.readFileSync(path.join(__dirname, "./template.html"), {
       encoding: "utf-8",
     });
+    const html = template.replace("{{^SCROLL_MSG}}", markup);
+    fs.writeFileSync("src/index.html", html, {
+      encoding: "utf-8",
+    });
+    console.log("Index Generated");
   });
