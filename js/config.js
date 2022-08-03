@@ -9,5 +9,5 @@ export default {
 
   openDate: false, // the page only can be opened at this time, read README.md
 
-  timeZone: "Asia/Jakarta", // timezone to use openDate feature
+  timeZone: "Kolkata/India", // timezone to use openDate feature
 };

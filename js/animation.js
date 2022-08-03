@@ -82,7 +82,6 @@ const transition = (currentScene) => {
 */
 
 CTAtext.innerHTML = "Click the Light Bulb.";
-
 readMsg(blackText);
 
 button.addEventListener("click", function () {
@@ -186,3 +185,183 @@ button.addEventListener("click", function () {
     }, 91000);
   }
 });
+
+////////////////////////////////////////////
+///////   Confetti Effects    /////////////
+//////////////////////////////////////////
+
+
+(function($){
+  $.confetti= new function(){
+      //global variable declearition
+      var canvas;     //canvas
+      var ConTx;      //context
+      var w,h;    //width & height
+      var maxp=200,particles=[];      //maximum perticles and array of those perticles
+      var angle=0,tiltAngle=0;
+      var confettiActive=true,animationComplete=true;
+      var aniHan;       //animation handler
+
+      //objects
+      var particleCol={
+          colorOptions:[
+              "Sienna","CornflowerBlue","CadetBlue",
+              "PaleTurquoise","Olive","Indigo",
+              "Khaki","MediumViolet","FireBrick",
+              "Goldenrod","Beige","Tan",
+              "DarkSeaGreen","Plum","Gold"
+          ],                  //define all the color
+          colIndex:0,
+          colIncre:0,         //color incrementer
+          colThres:10,        //color threshold
+
+          getCol: function(){
+              if(this.colIncre>=10){
+                  this.colIncre=0;
+                  this.colIndex++;
+                  if(this.colIndex>=this.colorOptions.length){
+                      this.colIndex=0;
+                  }
+
+              }
+              this.colIncre++;
+              return this.colorOptions[this.colIndex];
+          }
+      }
+
+      function confetti_particles(color){
+          this.x=Math.random()*w;     //  X co-ordinate
+          this.y=(Math.random()*h)-h;     //  Y co-ordinate
+          this.r=Math.floor(Math.random()*21)+10;     //  Radius
+          this.d=Math.floor(Math.random()*maxp)+10;       //  Density
+          this.color=color;           //color
+          this.tilt=Math.floor(Math.random()*10)-10;      //tilt
+          this.tiltAngleIncre=Math.floor(Math.random()*0.07)+0.05;    //tilt angle Increment
+          this.tiltAngle=0;
+
+          this.drawing=function(){
+              ConTx.beginPath();      
+              ConTx.lineWidth=this.r/2;       //line width = Radius/2
+              ConTx.strokeStyle=this.color;
+              ConTx.moveTo(this.x+this.tilt+(this.r/4),this.y);     //X-coordinate + tilt + (Radius/4) ----> Y-coordinates
+              ConTx.lineTo(this.x+this.tilt,this.y+this.tilt+(this.r/4));   //X-coordinate + tilt ---->  Y-coordinate + tilt + (Radius/4)
+              return ConTx.stroke();
+          }
+      }
+
+      function initial(){
+          SetBody();
+          // InitializeConfetti();
+          InitializeButton();
+
+          $(window).resize(function(){
+              w=window.innerWidth;        //width
+              h=window.innerHeight;       //height
+              canvas.width=w;
+              canvas.height=h;
+          });
+      }
+      function InitializeButton(){
+          $('.frame').click(InitializeConfetti);      //activate by clicking
+      }
+      function SetBody(){
+          $('body').append('<canvas id="confettiCanvas" style="position:absolute;top:0;left:0;display:none;z-index:1;"></canvas>');       // add css in body
+
+          canvas=document.getElementById("confettiCanvas");   // target id
+          ConTx=canvas.getContext("2d");
+          w=window.innerWidth;
+          h=window.innerHeight;
+          canvas.width=w;
+          canvas.height=h;
+      }
+
+      function InitializeConfetti(){
+          canvas.style.display='block';   // define canvas dispaly as block
+          particles=[];
+          animationComplete=false;
+
+          for(var i=0;i<maxp;i++){
+              var particleColor=particleCol.getCol();     //call for color
+              particles.push(new confetti_particles(particleColor));
+          }
+          Startconfetti();    // called for start
+      }
+
+      function Drawing(){
+          ConTx.clearRect(0,0,w,h);
+          var res=[];     //result array define
+          for(var i=0;i<maxp;i++){
+              (function(j){
+                  res.push(particles[j].drawing());
+              })(i);
+          }
+          Update();
+          return res;        
+      }
+
+      function Update(){
+          var remFlakes=0;        // Remaining Flakes
+          var particle;
+          angle=angle+0.01;       //angle change
+          tiltAngle=tiltAngle+0.1;        //tilt angle change
+
+          for(var i=0;i<maxp;i++){
+              particle=particles[i];
+              if(animationComplete) return;
+              if(!confettiActive && particle.y<-15){
+                  particle.y=h+100;
+                  continue;
+              }
+      
+              particle.tiltAngle=particle.tiltAngle+particle.tiltAngleIncre;
+              particle.y=particle.y + (Math.cos(angle+particle.d)+3+particle.r/2)/2;
+              particle.x=particle.x+Math.sin(angle);
+              particle.tilt=(Math.sin(particle.tiltAngle-(i/3)))*15;
+
+              if(particle.y<=h){
+                  remFlakes++;
+              }
+
+              // Checking for position
+             if((particle.x>w+20 || particle.x<-20 || particle.y>h) && confettiActive){
+                  if(i%5>0 || i%2==0){        //  ~67% of Flakes
+                      repos(particle,Math.random()*w,-10,Math.floor(Math.random()*10)-10);
+                  }
+                  else{
+                      repos(particle,w+5,Math.random()*h,Math.floor(Math.random()*10)-10);
+                  }
+             } 
+          }
+      }
+      function repos(particle,x_cor,y_cor,tilt){
+          particle.x=x_cor;
+          particle.y=y_cor;
+          particle.tilt=tilt;
+      }
+
+      
+      function Startconfetti(){
+          w=window.innerWidth;
+          h=window.innerHeight;
+          canvas.width=w;
+          canvas.height=h;
+
+          (function animationLoop(){      //loop
+              if(animationComplete) return null;
+              aniHan=reqAniFrame(animationLoop);
+              return Drawing();
+
+          })();
+      }
+
+      window.reqAniFrame=(function(){
+          return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(c){
+              return window.setTimeout(c,1000/60);
+          };
+      })();
+
+      this.initial = initial;
+      this.start = InitializeConfetti;
+  }
+  $.confetti.initial();       //main function call
+}(jQuery));
