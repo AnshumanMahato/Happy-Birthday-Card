@@ -10,10 +10,11 @@ const {
 
 require("dotenv").config();
 
+if (!process.env.NAME) throw new Error("Please specify NAME in environment.");
+if (!process.env.PIC) throw new Error("Please specify PIC in environment.");
+
 const picPath = process.env.PIC;
 const msgPath = process.env.SCROLL_MSG;
-
-if (!picPath) throw new Error("Please specify PIC in environment.");
 
 //Local initialization
 const setLocalData = async () => {

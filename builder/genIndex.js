@@ -19,12 +19,12 @@ const genIndex = function (markup) {
   html = html
     .replace("{{^READ_TIME}}", readVar)
     .replace("{{^SCROLL_MSG}}", markup)
-    .replace("{{^HBD_MSG}}", process.env.HBD_MSG)
-    .replace("{{^NAME}}", process.env.NAME)
     .replace(
-      "{{^NICKNAME}}",
-      process.env.NICKNAME ? process.env.NICKNAME : process.env.NAME
-    );
+      "{{^HBD_MSG}}",
+      process.env.HBD_MSG || "Wish you a very Happy Birthday"
+    )
+    .replace("{{^NAME}}", process.env.NAME)
+    .replace("{{^NICKNAME}}", process.env.NICKNAME || process.env.NAME);
 
   fs.writeFileSync(path.join(__dirname, "../src/index.html"), html, {
     encoding: "utf-8",
