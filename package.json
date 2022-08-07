@@ -11,9 +11,10 @@
   "scripts": {
     "watch:parcel": "parcel src/index.html",
     "build:parcel": "parcel build src/index.html",
-    "gen-index": "node build.js",
-    "watch": "npm-run-all gen-index watch:parcel",
-    "build": "npm-run-all gen-index build:parcel"
+    "init-index-local": "node builder/init.js --local",
+    "init-index-remote": "node builder/init.js --remote",
+    "watch": "npm-run-all init-index-local watch:parcel",
+    "build": "npm-run-all init-index-remote build:parcel"
   },
   "repository": {
     "type": "git",

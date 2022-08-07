@@ -140,6 +140,14 @@ export const animate = function () {
         return;
       }
 
+      //This value is stored in the --readTime css variable of root element and is calculated dynamically at build time.
+      const readTime =
+        parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--readTime"
+          )
+        ) + 5;
+
       frames[1].style.display = "flex";
 
       setTimeout(() => {
@@ -156,14 +164,14 @@ export const animate = function () {
       setTimeout(() => {
         msgWindow.classList.add("fade-in");
         msgWindow.style.opacity = "0";
-      }, 88000);
+      }, readTime * 1000);
 
       setTimeout(() => {
         frames[1].style.display = "none";
         frames[0].style.display = "flex";
         frames[0].classList.add("appear");
         frames[0].style.opacity = "1";
-      }, 91000);
+      }, (readTime + 3) * 1000);
     }
   });
 };
