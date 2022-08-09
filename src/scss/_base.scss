@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media (min-width: 1200px) {
+    font-size: 70%;
+  }
+}
+
+body {
+  color: #fff;
+  font-family: "Courgette", cursive;
+  // background-color: black;
+}

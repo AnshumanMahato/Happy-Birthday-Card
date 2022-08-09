@@ -1,0 +1,356 @@
+// DECORATIONS
+
+.balloon {
+  grid-row: 1 / -1;
+  width: 130%;
+
+  &--left {
+    grid-column: balloon-l-start / balloon-l-end;
+    animation: balloon-move 4s linear 0s infinite;
+    @media (max-width: 800px) {
+      margin-left: -25%;
+    }
+
+    @media (max-width: 500px) {
+      margin-left: -40%;
+    }
+  }
+
+  &--right {
+    grid-column: balloon-r-start / balloon-r-end;
+    margin-left: -20%;
+    animation: balloon-move 4s linear 0s infinite reverse;
+    @media (max-width: 800px) {
+      margin-left: 25%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    width: 120%;
+  }
+}
+
+.flag {
+  grid-row: 1/2;
+  z-index: 0;
+
+  &--c-left {
+    grid-column: flag-cl-start / flag-cl-end;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &--c-right {
+    grid-column: flag-cr-start / flag-cr-end;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &--left {
+    grid-column: flag-l-start / flag-l-end;
+  }
+
+  &--right {
+    grid-column: flag-r-start / flag-r-end;
+  }
+
+  @media (max-width: 800px) {
+    transform: scale(1.2);
+    margin-top: 20%;
+  }
+}
+
+// BIRTHDAY CARD
+
+.img-back {
+  position: relative;
+  background-color: #ffa8dc;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+
+  @media (max-width: 800px) {
+    height: 35rem;
+    width: 35rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+.bd-pic {
+  @include position;
+
+  height: 83.33333333%;
+  width: 83.33333333%;
+  overflow: hidden;
+
+  border-color: #fff;
+  border-style: dotted;
+  border-radius: 50%;
+
+  background-image: url(../pic.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cap {
+  @include position(-15%, 50%, 0, 0);
+
+  height: 33.33333333%;
+}
+
+.confetti {
+  @include position;
+
+  height: 150%;
+  width: 150%;
+}
+
+.cake {
+  @include position(90%);
+
+  height: 70%;
+  width: 70%;
+}
+
+.HBD-text {
+  width: 90%;
+}
+
+.HBD {
+  font-size: 2.4rem;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    font-size: 3.4rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
+}
+
+.nickname {
+  font-size: 3.2rem;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    font-size: 4.2rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 3.8rem;
+  }
+}
+
+// SCROLL
+
+.scroll {
+  position: relative;
+  overflow-y: hidden;
+  height: 70%;
+  width: 80%;
+  font-size: 2.4rem;
+
+  @media (max-width: 800px) {
+    // width: 60%;
+    height: 60%;
+  }
+
+  @media (max-width: 500px) {
+    height: 80%;
+    font-size: 2.2rem;
+  }
+}
+
+.text {
+  @include position(50%, 0, 0, 0);
+  text-align: center;
+}
+
+// BUTTONS
+
+.btn {
+  @include position(60%, 50%, 0, -50%);
+
+  display: none;
+  overflow: hidden;
+  height: 15rem;
+  width: 15rem;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: heart-beat 2s linear 0s infinite alternate;
+}
+
+.btn-ref {
+  @include position(90%, 50%, -50%, 0);
+
+  text-align: center;
+
+  color: #fff;
+  display: none;
+  font-size: 1.8rem;
+}
+
+.switch {
+  background-image: url("../resources/img/bulb.svg");
+}
+
+.gift {
+  background-image: url("../resources/img/gift.svg");
+}
+
+.door-in,
+.door-out {
+  background-image: url("../resources/img/door.svg");
+}
+
+//ROOMS
+
+.darkroom,
+.flash,
+.giftroom,
+.empty-room,
+.hallway {
+  text-align: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.darkroom {
+  background-color: #000;
+}
+
+.flash {
+  background-color: #fff;
+}
+
+.giftroom,
+.empty-room {
+  background-color: #141852;
+}
+
+.hallway {
+  background-image: radial-gradient(transparent, #000),
+    url(../resources/img/Hallway.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.empty-room,
+.giftroom,
+.content {
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.65)),
+    url(../resources/img/bedroom.svg);
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// TEXT CONTAINERS
+
+.bb-text,
+.gift-text,
+.hall-text,
+.room-text {
+  @include position(20%, 50%, -50%, -50%);
+
+  display: inline-block;
+  text-align: center;
+  width: 80vw;
+  opacity: 0;
+  font-size: 3.2rem;
+}
+
+// CANDLE -> https://codepen.io/rizqyhi/pen/BsAFn
+
+.velas {
+  background: #ffffff;
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 1.5%;
+  height: 12%;
+  backface-visibility: hidden;
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5%;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* Fire */
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -50%;
+  left: 60%;
+  margin-left: -2.6px;
+  width: 100%;
+  height: 40%;
+}
+.fuego:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+.fuego:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* Animation Fire */
+
+@keyframes fuego {
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 250% 62.5% rgba(248, 233, 209, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 250% 125% rgba(248, 233, 209, 0.2);
+    transform: scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}

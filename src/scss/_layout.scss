@@ -1,0 +1,40 @@
+.content {
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+
+  display: grid;
+  grid-template-columns:
+    [flag-cl-start balloon-l-start] 1fr
+    [flag-cl-end balloon-l-end flag-l-start frame-start] 1fr
+    [flag-l-end flag-r-start] 1fr
+    [flag-r-end flag-cr-start balloon-r-start frame-end] 1fr [flag-cr-end balloon-r-end];
+  grid-template-rows: 30vh 70vh;
+
+  & > * {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns:
+      [flag-l-start balloon-l-start frame-start] 1fr
+      [balloon-l-end flag-l-end flag-r-start balloon-r-start ] 1fr [flag-r-end balloon-r-end frame-end];
+  }
+}
+
+.frame {
+  grid-row: 2/3;
+  grid-column: frame-start / frame-end;
+
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.page-404 {
+  background-color: #413f42;
+  text-align: center;
+}

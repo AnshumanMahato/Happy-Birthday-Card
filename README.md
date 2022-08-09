@@ -1,6 +1,6 @@
 # Happy Birthday Card
 
-A Web based birthday card to wish your friends and family in a unique way.
+A Customizable Web based birthday card to wish your friends and family in a unique way.
 
 Check out the [Preview](https://happy-birthday-card.vercel.app/).
 
@@ -8,47 +8,60 @@ If you liked it, please consider giving it star 🤩⭐. Feel free to fork too �
 
 ---
 
-## <ins>How to setup</ins>
+## How to setup
 
-Setup is very simple. Just edit the configuration object in [config.js](./js/config.js). This is what the configuration object looks like.
+### Remote Deployment
 
-```js
-export default {
-  name: "Friend", // actual name of the recipient (Mandatory)
+- Vercel Deploy
 
-  nickname: "Buddy", // nickname(optional)
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2FHappy-Birthday-Card&env=NAME,PIC&envDescription=NAME%20-%3E%20Name%20of%20the%20Receiver%20%7C%20PIC%20-%3E%20web%20url%20of%20a%20picture%20of%20the%20receiver&envLink=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2Fvercel-test-hbd%2Fblob%2Fmain%2Fdocs%2Fvariables.md&project-name=happy-birthday-card&repo-name=happy-birthday-card)
 
-  pic: "", // image url of recipients (Mandatory)
+- Netlify Deploy
 
-  showScrollMsg: true, // set to false if you do not want the scrolling message
+  [![Deploy with NEtlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AnshumanMahato/Happy-Birthday-Card)
 
-  openDate: false, // the page only can be opened at this time
+### For Local Building
 
-  timeZone: "Asia/Jakarta", // your timezone, if you use openDate extension
-};
-```
+1. Clone the repository
 
-The `name` and `nickname` are self explainatory and `nickname` is optional. If no nickname is provided, then value of name will be used in its place.
+   ```sh
+   git clone https://github.com/AnshumanMahato/Happy-Birthday-Card
+   ```
 
-`showScrollMsg` takes `true` or `false`. If set to `false`, the scroll message will be skipped and card will apper directly.
+2. Install dependencies
 
-`pic` will take the url of the image of the recipient. This will appear on the birthday card.
+   ```sh
+   npm install
+   ```
 
-`openDate` is used to prevent user open the page too late or too early. Fill this field using this format  
-mm-dd-yyyy (12-05-2021) or false if you desire to disable it.
+3. Add a pic of the receiver, in the `./local` directory. Ensure that the image is of 1:1 ratio or it might get cropped and squished.
 
-### <ins>Setting up the pic</ins>
+4. Create a `.env` file in root directory, and add the following lines.
 
-You can upload your image to telegra.ph, publish it and then get the image url (image address). It would be good if the image is of 1:1 aspect ratio and not more than 400px in height and width as larger images can affect load times.
+   ```env
+    NAME='Name of the Receiever'
+    PIC='name-of-image.extension'
+   ```
 
-Alternatively, you can also manually replace [Asset.png](./resources/img/Asset.png) with your image, make necessary changes at line 97 in [here](./scss/_components.scss) and then rebuild.
+5. Execute the following commands in order.
+
+   ```sh
+    npm run init-index-local
+    npm run build:parcel
+   ```
+
+6. Upon Successful execution, your built files will be ready in the `./dist` directory. Open `./dist/index.html` to see the card.
+
+For further customization, checkout [here](./docs/customizations.md).
 
 ---
 
-## <ins>Atributions</ins>
+## References
 
-- <a href='https://www.freepik.com/vectors/pattern'>Pattern vector created by mokoland - www.freepik.com</a>
+- [Environment Variables](./docs/variables.md)
 
-- <a href='https://www.freepik.com/vectors/christmas'>Christmas vector created by freepik - www.freepik.com</a>
-- <a href='https://www.freepik.com/vectors/background'>Background vector created by brgfx - www.freepik.com</a>
-- <a href='https://www.freepik.com/vectors/halloween'>Halloween vector created by vectorpouch - www.freepik.com</a>
+- [Attributions](./docs/attributions.md)
+
+---
+
+<div align="center">Made with 💖 by Anshuman Mahato</div>

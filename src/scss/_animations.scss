@@ -1,0 +1,89 @@
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes read {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.25, 1.25);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+@keyframes balloon-move {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(5%) rotate(3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  75% {
+    transform: translateY(-5%) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+// Dynamic Classes
+
+.hidden {
+  display: none;
+}
+.fade-in {
+  animation: fade 2s ease-in 0s;
+}
+
+.appear {
+  animation: fade 2s linear 0s 1 reverse;
+}
+
+.read {
+  animation: read 4s linear 0s;
+}
+
+.move-up {
+  animation: move-up var(--readTime) linear 3s;
+}
