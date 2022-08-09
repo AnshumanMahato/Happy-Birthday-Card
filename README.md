@@ -79,7 +79,7 @@ For further customization, checkout [here](./docs/customizations.md).
 
 ## Support
 
-If you have any queries or need some help in deployment, you me contact me here
+If you have any queries or need some help in deployment, you may contact me here
 
 <div align="center">
 
