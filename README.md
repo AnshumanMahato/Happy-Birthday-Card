@@ -7,11 +7,13 @@ Check out the Previews -
 - [Without Scroll Message](https://happy-birthday-card.vercel.app/)
 - [With Scroll Message](https://hbd-card.netlify.app/)
 
-If you liked it, please consider giving it star 🤩⭐. Feel free to fork too 🤗.
+If you liked it, please consider giving it star a 🤩⭐.
 
 ---
 
 ## How to setup
+
+Here are the methods to set it up for yourself.
 
 ### Remote Deployment
 
@@ -75,4 +77,15 @@ For further customization, checkout [here](./docs/customizations.md).
 
 ---
 
-<div align="center">Made with 💖 by Anshuman Mahato</div>
+## Support
+
+If you have any queries or need some help in deployment, you me contact me here
+
+<div align="center">
+
+<a href="https://t.me/anshumans_assistant_bot"><img src="https://cdn.cdnlogo.com/logos/t/39/telegram.svg" height="50px"></a>
+<a href="mailto:rcoder.bytes@gmail.com"><img src="https://cdn.cdnlogo.com/logos/g/93/gmail.svg" height="50px"></a>
+
+Made with 💖 by Anshuman Mahato
+
+</div>
