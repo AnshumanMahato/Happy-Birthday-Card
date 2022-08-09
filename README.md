@@ -19,7 +19,7 @@ Here are the methods to set it up for yourself.
 
 - Vercel Deploy
 
-  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2FHappy-Birthday-Card&env=NAME,PIC&envDescription=NAME%20-%3E%20Name%20of%20the%20Receiver%20%7C%20PIC%20-%3E%20web%20url%20of%20a%20picture%20of%20the%20receiver&envLink=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2Fvercel-test-hbd%2Fblob%2Fmain%2Fdocs%2Fvariables.md&project-name=happy-birthday-card&repo-name=happy-birthday-card)
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2FHappy-Birthday-Card&env=NAME,PIC&envDescription=NAME%20-%3E%20Name%20of%20the%20Receiver%20%7C%20PIC%20-%3E%20web%20url%20of%20a%20picture%20of%20the%20receiver&envLink=https%3A%2F%2Fgithub.com%2FAnshumanMahato%2Fvercel-test-hbd%2Fblob%2Fmain%2Fdocs%2Fvariables.md&project-name=happy-birthday-card&repo-name=happy-birthday-card&demo-title=Happy%20Birthday%20Card&demo-description=This%20is%20a%20web%20based%20interactive%20birthday%20card.&demo-url=https%3A%2F%2Fhappy-birthday-card.vercel.app%2F&demo-image=https%3A%2F%2Ftelegra.ph%2Ffile%2Fac886529ccc3843552f81.png)
 
 - Netlify Deploy
 
