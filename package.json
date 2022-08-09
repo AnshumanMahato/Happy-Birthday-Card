@@ -1,6 +1,6 @@
 {
   "name": "happy-birthday-card",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "A birthday card template",
   "main": "index.js",
   "default": "index.html",
@@ -31,7 +31,9 @@
   },
   "homepage": "https://github.com/AnshumanMahato/Happy-Birthday-Card#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
+    "@parcel/transformer-webmanifest": "^2.6.2",
     "parcel": "^2.6.2",
     "sass": "^1.53.0"
   },
