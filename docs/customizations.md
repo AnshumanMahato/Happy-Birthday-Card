@@ -32,7 +32,7 @@ Instead of the predefined 'Wish you a very happy birthday' text in the card, one
 
 The card can be set to be visible only for a specific day. On other days, it will show a different page depending upon whether it is accessed before or after the specified date.
 
-To set this, specify the date in `YYYY-MM-DD` format as `BIRTH_DATE` environment variable.
+To set this, specify the date in `YYYY-MM-DD` format as `OPEN_DATE` environment variable.
 
 ---
 

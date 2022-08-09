@@ -11,7 +11,7 @@ Following is the list of all the environment variables that are used in this pro
   NICKNAME
   HBD_MSG
   SCROLL_MSG
-  BIRTH_DATE
+  OPEN_DATE
 ```
 
 - The `NAME` and `NICKNAME` are self explainatory. `NICKNAME` is optional. If no nickname is provided, then value of name will be used in its place.
@@ -34,7 +34,7 @@ Following is the list of all the environment variables that are used in this pro
 
   Check [Customizations](./customizations.md#the-scrolling-message) to know how to set up.
 
-- `BIRTH_DATE` is an optional variable to specify the active date for the webpage. It the takes the date in `YYYY-MM-DD` format as value. Used to setup the Live Date feature. Check [Customizations](./customizations.md#live-only-for-a-specific-day) to know how to set up.
+- `OPEN_DATE` is an optional variable to specify the active date for the webpage. It the takes the date in `YYYY-MM-DD` format as value. Used to setup the Live Date feature. Check [Customizations](./customizations.md#live-only-for-a-specific-day) to know how to set up.
 
 ---
 

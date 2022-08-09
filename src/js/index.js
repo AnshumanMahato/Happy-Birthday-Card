@@ -7,7 +7,7 @@ import { animate } from "./animation.js";
 
 /******************************************************* SETUP ************************************************************/
 
-if (process.env.BIRTH_DATE) {
+if (process.env.OPEN_DATE) {
   const status = isBDay();
   if (status === "IS_EARLY") setPage(soon);
   if (status === "IS_LATE") setPage(late);
