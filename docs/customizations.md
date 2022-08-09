@@ -6,7 +6,7 @@ Following are some of the customizations that can be added to the card.
 
 The scrolling message is a customization that you can enable in the card. Once enabled, a custom message can be displayed to the user before rendering the actual card.
 
-Check it out in this [sample deployment]()
+Check it out in this [sample deployment](https://hbd-card.netlify.app/) to see this feature.
 
 ### in Remote Deployment
 

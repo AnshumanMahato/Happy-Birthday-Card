@@ -2,7 +2,10 @@
 
 A Customizable Web based birthday card to wish your friends and family in a unique way.
 
-Check out the [Preview](https://happy-birthday-card.vercel.app/).
+Check out the Previews -
+
+- [Without Scroll Message](https://happy-birthday-card.vercel.app/)
+- [With Scroll Message](https://hbd-card.netlify.app/)
 
 If you liked it, please consider giving it star 🤩⭐. Feel free to fork too 🤗.
 
