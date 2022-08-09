@@ -7,4 +7,4 @@
 
 ---
 
-<center>Made with 💖 by Anshuman Mahato</center>
+<div align="center">Made with 💖 by Anshuman Mahato</div>

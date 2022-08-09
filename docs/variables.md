@@ -20,7 +20,9 @@ Following is the list of all the environment variables that are used in this pro
 
   - For local building, one needs to add the image file to the `./local` directory and add the name of the file as its value.
 
-  - For remote deployment, it is the web address of image file.
+  - For remote deployment, it is the web address of image file. If don't have the image hosted somewhere, you may publish a [telegra.ph article](https://telegra.ph) with your image and copy the image address from there.
+
+  NOTE: Picture must be in 1:1 ratio or it will get cropped.
 
 - `HBD_MSG` is an optional variable that adds a custom HBD greeting. It takes the custom message as value. Check [Customizations](./customizations.md#custom-happy-bday-text) to know how to set up.
 

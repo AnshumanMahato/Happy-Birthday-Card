@@ -20,6 +20,14 @@ If you liked it, please consider giving it star 🤩⭐. Feel free to fork too �
 
   [![Deploy with NEtlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AnshumanMahato/Happy-Birthday-Card)
 
+Remote deployment will require you to specify some mandatory Evironment Variables,
+
+- NAME: Name of the receiver.
+
+- PIC: Url of the pic to be loaded in the card. If don't have the image hosted somewhere, you may publish a [telegra.ph article](https://telegra.ph) with your image and copy the image address from there.
+
+To know more about the environment variables, check [References](#references).
+
 ### For Local Building
 
 1. Clone the repository
