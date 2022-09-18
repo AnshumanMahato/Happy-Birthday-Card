@@ -83,7 +83,7 @@ If you have any queries or need some help in deployment, you may contact me here
 
 <div align="center">
 
-<a href="https://t.me/anshumans_assistant_bot"><img src="https://cdn.cdnlogo.com/logos/t/39/telegram.svg" height="50px"></a>
+<a href="https://t.me/AnshumanMahato"><img src="https://cdn.cdnlogo.com/logos/t/39/telegram.svg" height="50px"></a>
 <a href="mailto:rcoder.bytes@gmail.com"><img src="https://cdn.cdnlogo.com/logos/g/93/gmail.svg" height="50px"></a>
 
 Made with 💖 by Anshuman Mahato
