@@ -66,7 +66,7 @@ npm install
 
 ```
 
-6. Upon Successful execution, your built files will be ready in the `./dist` directory. Open `./dist/index.html` to see the card.
+6. Upon Successful execution, your built files will be ready in the `./dist` directory. Serve this directory using `live-server` or similar tools to see your card.
 
 For further customization, check out [here](./docs/customizations.md).
 
