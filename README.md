@@ -83,8 +83,8 @@ For further customization, check out [here](./docs/customizations.md).
 
 If you have any queries or need some help in deployment, you may contact me here
 
-[Telegram](https://t.me/AnshumanMahato)
-[Email](mailto:rcoder.bytes@gmail.com)
+- [Telegram](https://t.me/AnshumanMahato)
+- [Email](mailto:rcoder.bytes@gmail.com)
 
 <div align="center">
 Made with 💖 by Anshuman Mahato
